@@ -15,3 +15,10 @@ Requirements:
 - [ ] User can access menu from top left button.
 - [ ] User can toggle app to dark / light mode.
 - [ ] User can logout and clear all data.
+
+## Process
+
+* Start by implementing the wireframe without any state.
+* we are in a hurry so we will also keep declaring models simultaneously
+* some source get won't hurt. json_serializable is enough for this one.
+
