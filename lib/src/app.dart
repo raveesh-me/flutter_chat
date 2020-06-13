@@ -14,7 +14,6 @@ class _MyAppState extends State<MyApp> {
   /// we are ignoring the platform setting at this point.
   /// we still have to figure out a way to set correct themeData from [MediaQuery.of(context).platformBrightness]
   /// since we are passing theme to materialApp, there is no way to check this setting above material app.
-  ///
   /// A bug should be filed
   Brightness appBrightness = Brightness.light;
 
@@ -37,7 +36,7 @@ class _MyAppState extends State<MyApp> {
           Provider<AppBrightnessToggle>.value(value: toggleAppBrightness)
         ],
       ),
-      theme: ThemeData(brightness: appBrightness),
+      theme: ThemeData(brightness: appBrightness, primarySwatch: Colors.green),
       initialRoute: RootScreen.routeName,
       routes: {
         RootScreen.routeName: (_) => RootScreen(),
