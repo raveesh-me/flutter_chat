@@ -2,15 +2,16 @@
 
 Holmusk Submission
 
-## Getting Started
+## Spec
 
-This project is a starting point for a Flutter application.
+Requirements:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- User can Login or Create account to use app features.
+- User can view and edit their profile.
+- User can refresh their profile.
+- User can see and refresh list of their friends.
+- User can see and refresh message from their friend inside a chat room.
+- User can send text and image (camera and photo library).
+- User can access menu from top left button.
+- User can toggle app to dark / light mode.
+- User can logout and clear all data.
