@@ -37,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   getScreenByNavigablePage(NavigablePage navigablePage) {
-    Widget widget;
     switch (navigablePage) {
       case NavigablePage.list:
         return HomeScreenFriendsList();
