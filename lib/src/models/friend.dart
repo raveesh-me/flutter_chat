@@ -9,4 +9,9 @@ class Friend {
   factory Friend.fromJson(Map<String, dynamic> json) => _$FriendFromJson(json);
 
   Map<String, dynamic> toJson() => _$FriendToJson(this);
+
+  @override
+  String toString() => """
+      Friend ${toJson()}
+      """;
 }
