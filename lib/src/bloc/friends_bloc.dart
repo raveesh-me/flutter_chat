@@ -1,0 +1,2 @@
+class FriendsBlocModel{}
+class FriendsBloc{}

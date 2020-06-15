@@ -5,6 +5,10 @@ import 'package:simpleholmuskchat/src/screens/chatroom_screen/chatroom_screen.da
 import 'package:simpleholmuskchat/src/screens/root_screen/root_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'bloc/account_bloc.dart';
+import 'bloc/friends_bloc.dart';
+import 'bloc/messages_bloc.dart';
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();

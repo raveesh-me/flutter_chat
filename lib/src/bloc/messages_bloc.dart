@@ -1,0 +1,3 @@
+class MessagesBlocModel{}
+
+class MessagesBloc{}
