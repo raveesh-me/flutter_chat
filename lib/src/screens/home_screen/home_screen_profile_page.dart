@@ -1,21 +1,26 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:simpleholmuskchat/src/models/profile.dart';
 
 class HomeScreenProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Profile profile = Profile('id', 'name', 'avatarUrl');
-    return RefreshIndicator(
-      onRefresh: () async {
-        log("refreshing...");
-        return;
-      },
-      child: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+    Profile profile = Provider.of(context);
+    return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text("Edit"),
+        icon: Icon(Icons.edit),
+      ),
+      body: RefreshIndicator(
+        onRefresh: () async {
+          log("refreshing...");
+          return;
+        },
+        child: ListView(
+          physics: AlwaysScrollableScrollPhysics(),
           children: [
             CircleAvatar(
               child: Placeholder(),

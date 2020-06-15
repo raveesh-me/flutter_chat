@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simpleholmuskchat/src/bloc/profile_bloc.dart';
+import 'package:simpleholmuskchat/src/models/profile.dart';
 import 'package:simpleholmuskchat/src/screens/chatroom_screen/chatroom_screen.dart';
 import 'package:simpleholmuskchat/src/screens/root_screen/root_screen.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +18,15 @@ class _MyAppState extends State<MyApp> {
   /// since we are passing theme to materialApp, there is no way to check this setting above material app.
   /// A bug should be filed
   Brightness appBrightness = Brightness.light;
+  /// Bloc responsible for user profile
+  ProfileBloc profileBloc = ProfileBloc();
+  /// Bloc Responsible for user login state
+  AccountBloc accountBloc = AccountBloc();
+  /// Bloc Responsible for friends
+  FriendsBloc friendsBloc = FriendsBloc();
+  /// Bloc Responsible for messages with one specific friend
+  MessagesBloc messagesBloc = MessagesBloc();
+
 
   toggleAppBrightness() {
     setState(() {
@@ -33,7 +44,8 @@ class _MyAppState extends State<MyApp> {
       builder: (BuildContext context, Widget child) => MultiProvider(
         child: child,
         providers: [
-          Provider<AppBrightnessToggle>.value(value: toggleAppBrightness)
+          Provider<AppBrightnessToggle>.value(value: toggleAppBrightness),
+          StreamProvider.value(value: )
         ],
       ),
       theme: ThemeData(brightness: appBrightness, primarySwatch: Colors.green),
