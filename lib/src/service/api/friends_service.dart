@@ -19,8 +19,7 @@ abstract class FriendsService {
         headers: {"token": token},
       );
       if (response.statusCode == 200) {
-        final List<dynamic> _list =
-            List.from(json.decode(response.body)["token"]);
+        final List<dynamic> _list = List.from(json.decode(response.body));
         final List<Friend> friendsList =
             _list.map((e) => Friend.fromJson(Map.from(e)));
         return friendsList;
@@ -29,5 +28,6 @@ abstract class FriendsService {
     } catch (e) {
       log('$e', name: "Friends API Service", stackTrace: StackTrace.current);
     }
+    throw UnimplementedError();
   }
 }

@@ -21,4 +21,13 @@ class LoginService {
     else
       return HttpErrorHandler.handleResponseError(response);
   }
+
+  static Future<bool> signOutAndDelete(String token) async {
+    var urlOptions = await UrlOptions.init(opEnvironment);
+    final http.Response response = await http.delete(
+      "${urlOptions.baseUrl}$_path",
+      headers: {'token': token},
+    );
+    return response.statusCode == 200;
+  }
 }
