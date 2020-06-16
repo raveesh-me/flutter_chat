@@ -1,0 +1,33 @@
+{"friends": [
+  {
+    "id": "friend_00",
+    "name": "friend 00",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  },  {
+    "id": "friend_01",
+    "name": "friend 01",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  },  {
+    "id": "friend_02",
+    "name": "friend 02",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  },  {
+    "id": "friend_03",
+    "name": "friend 03",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  },  {
+    "id": "friend_04",
+    "name": "friend 04",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  },  {
+    "id": "friend_05",
+    "name": "friend 05",
+    "avatarUrl": "avatar.png",
+    "lastMessage": "lastMessage"
+  }
+]}

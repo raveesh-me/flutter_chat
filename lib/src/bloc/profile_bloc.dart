@@ -1,5 +1,6 @@
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/models/profile.dart';
+import 'package:simpleholmuskchat/src/service/api/profile_service.dart';
 
 class ProfileBlocModel {
   final Profile profile;
@@ -9,16 +10,19 @@ class ProfileBlocModel {
 }
 
 class ProfileBloc {
+  ProfileService profileService;
+
   ProfileBlocModel _profileBlocModel;
   set mProfile(Profile profile) {
     _profileBlocModel = ProfileBlocModel(profile, this);
-    profileBlocSubject.add(_profileBlocModel);
+    _profileBlocSubject.add(_profileBlocModel);
   }
 
-  final profileBlocSubject = BehaviorSubject<ProfileBlocModel>();
+  final _profileBlocSubject = BehaviorSubject<ProfileBlocModel>();
+  Stream<ProfileBlocModel> get stream => _profileBlocSubject.stream;
 
   dispose() {
-    profileBlocSubject.close();
+    _profileBlocSubject.close();
   }
 
   init() {

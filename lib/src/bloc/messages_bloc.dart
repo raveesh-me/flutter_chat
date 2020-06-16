@@ -1,3 +1,3 @@
-class MessagesBlocModel{}
+class MessagesBlocModel {}
 
-class MessagesBloc{}
+class MessagesBloc {}
