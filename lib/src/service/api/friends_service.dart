@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:http/http.dart' as http;
 import 'package:simpleholmuskchat/op_environments.dart';
@@ -11,14 +12,22 @@ const _path = "/friends";
 /// authenticates service
 abstract class FriendsService {
   static Future<List<Friend>> getFriends(String token, [int page = 0]) async {
-    final urlOptions = await UrlOptions.init(opEnvironment);
-    final http.Response response = await http.get(
-      "${urlOptions.baseUrl}$_path/$page",
-      headers: {"token": token},
-    );
-    if (response.statusCode == 200)
-      return json.decode(response.body)["token"];
-    else
-      return HttpErrorHandler.handleResponseError(response);
+    try {
+      final urlOptions = await UrlOptions.init(opEnvironment);
+      final http.Response response = await http.get(
+        "${urlOptions.baseUrl}$_path/$page",
+        headers: {"token": token},
+      );
+      if (response.statusCode == 200) {
+        final List<dynamic> _list =
+            List.from(json.decode(response.body)["token"]);
+        final List<Friend> friendsList =
+            _list.map((e) => Friend.fromJson(Map.from(e)));
+        return friendsList;
+      } else
+        return HttpErrorHandler.handleResponseError(response);
+    } catch (e) {
+      log('$e', name: "Friends API Service", stackTrace: StackTrace.current);
+    }
   }
 }
