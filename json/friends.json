@@ -1,0 +1,53 @@
+[
+  {
+    "id": "id_00",
+    "name": "name_00",
+    "avatarUrl": "avatar_00.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_01",
+    "name": "name_01",
+    "avatarUrl": "avatar_01.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_02",
+    "name": "name_02",
+    "avatarUrl": "avatar_02.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_03",
+    "name": "name_03",
+    "avatarUrl": "avatar_03.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_04",
+    "name": "name_04",
+    "avatarUrl": "avatar_04.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_05",
+    "name": "name_05",
+    "avatarUrl": "avatar_05.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_06",
+    "name": "name_06",
+    "avatarUrl": "avatar_06.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_07",
+    "name": "name_07",
+    "avatarUrl": "avatar_07.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_08",
+    "name": "name_08",
+    "avatarUrl": "avatar_08.jpg",
+    "lastMessage": "lastMessage"
+  },{
+    "id": "id_09",
+    "name": "name_09",
+    "avatarUrl": "avatar_09.jpg",
+    "lastMessage": "lastMessage"
+  }
+]

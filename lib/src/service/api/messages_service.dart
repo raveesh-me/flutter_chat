@@ -11,8 +11,7 @@ const String _path = "/messages";
 
 /// authenticated service, needs tokens to work
 class MessagesService {
-  Future<List<Message>> getMessages(
-      String token, String friendId) async {
+  Future<List<Message>> getMessages(String token, String friendId) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.get(
