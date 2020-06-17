@@ -9,13 +9,17 @@ import 'package:simpleholmuskchat/src/service/api/url_options.dart';
 const String _path = "/profile";
 
 class ProfileService {
-  Future<Profile> getProfile(String token) async {
+  final String _token;
+
+  ProfileService(this._token);
+
+  Future<Profile> getProfile() async {
     try {
       UrlOptions urlOptions = await UrlOptions.init(opEnvironment);
       http.Response response = await http.get(
         '${urlOptions.baseUrl}$_path',
         headers: {
-          "token": token,
+          "token": _token,
         },
       );
       if (response.statusCode == 200) {
@@ -28,14 +32,14 @@ class ProfileService {
     throw UnimplementedError();
   }
 
-  Future<Profile> updateProfile(String token, Profile newProfile) async {
+  Future<Profile> updateProfile(Profile newProfile) async {
     try {
       UrlOptions urlOptions = await UrlOptions.init(opEnvironment);
       http.Response response = await http.put(
         '${urlOptions.baseUrl}$_path',
         body: newProfile.toJson(),
         headers: {
-          "token": token,
+          "token": _token,
         },
       );
       if (response.statusCode == 200) {

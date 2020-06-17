@@ -10,13 +10,16 @@ import 'package:simpleholmuskchat/src/service/api/url_options.dart';
 /// authenticates service
 abstract class FriendsService {
   final _path = "/friends";
+  final String _token;
 
-  Future<List<Friend>> getFriends(String token, [int page = 0]) async {
+  FriendsService(this._token);
+
+  Future<List<Friend>> getFriends([int page = 0]) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.get(
         "${urlOptions.baseUrl}$_path/$page",
-        headers: {"token": token},
+        headers: {"token": _token},
       );
       if (response.statusCode == 200) {
         final List<dynamic> _list = List.from(json.decode(response.body));

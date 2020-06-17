@@ -11,12 +11,16 @@ const String _path = "/messages";
 
 /// authenticated service, needs tokens to work
 class MessagesService {
-  Future<List<Message>> getMessages(String token, String friendId) async {
+  final String _token;
+
+  MessagesService(this._token);
+
+  Future<List<Message>> getMessages(String friendId) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.get(
           '${urlOptions.baseUrl}$_path/$friendId',
-          headers: {"token": token});
+          headers: {"token": _token});
       if (response.statusCode == 200) {
         final List<dynamic> _list = List.from(json.decode(response.body));
         final List<Message> messages =
@@ -30,14 +34,13 @@ class MessagesService {
     throw UnimplementedError();
   }
 
-  Future<List<Message>> sendMessage(
-      String token, String friendId, Message message) async {
+  Future<List<Message>> sendMessage(String friendId, Message message) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.post(
           '${urlOptions.baseUrl}$_path/$friendId',
           body: message.toJson(),
-          headers: {"token": token});
+          headers: {"token": _token});
       if (response.statusCode == 200) {
         final List<dynamic> _list = List.from(json.decode(response.body));
         final List<Message> messages =

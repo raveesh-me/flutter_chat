@@ -25,8 +25,8 @@ class ProfileBloc {
     _profileBlocSubject.close();
   }
 
-  init() {
-    mProfile = Profile('id', 'name', 'avatarUrl');
+  init() async {
+    mProfile = await profileService.getProfile(token);
   }
 
   refreshProfile() {}
