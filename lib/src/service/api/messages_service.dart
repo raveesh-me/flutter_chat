@@ -11,7 +11,7 @@ const String _path = "/messages";
 
 /// authenticated service, needs tokens to work
 class MessagesService {
-  static Future<List<Message>> getMessages(
+  Future<List<Message>> getMessages(
       String token, String friendId) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
@@ -31,7 +31,7 @@ class MessagesService {
     throw UnimplementedError();
   }
 
-  static Future<List<Message>> sendMessage(
+  Future<List<Message>> sendMessage(
       String token, String friendId, Message message) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);

@@ -9,7 +9,7 @@ const String _path = '/login';
 
 /// Unauthenticated, does not need a token, but returns one.
 class LoginService {
-  static Future<String> signInGetToken(String email, String password) async {
+  Future<String> signInGetToken(String email, String password) async {
     var urlOptions = await UrlOptions.init(opEnvironment);
     final http.Response response =
         await http.post(urlOptions.baseUrl + _path, body: {
@@ -22,7 +22,7 @@ class LoginService {
       return HttpErrorHandler.handleResponseError(response);
   }
 
-  static Future<bool> signOutAndDelete(String token) async {
+  Future<bool> signOutAndDelete(String token) async {
     var urlOptions = await UrlOptions.init(opEnvironment);
     final http.Response response = await http.delete(
       "${urlOptions.baseUrl}$_path",

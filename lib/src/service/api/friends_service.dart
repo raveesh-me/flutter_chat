@@ -7,11 +7,11 @@ import 'package:simpleholmuskchat/src/models/friend.dart';
 import 'package:simpleholmuskchat/src/service/api/http_error_handler.dart';
 import 'package:simpleholmuskchat/src/service/api/url_options.dart';
 
-const _path = "/friends";
-
 /// authenticates service
 abstract class FriendsService {
-  static Future<List<Friend>> getFriends(String token, [int page = 0]) async {
+  final _path = "/friends";
+
+  Future<List<Friend>> getFriends(String token, [int page = 0]) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.get(

@@ -9,7 +9,7 @@ import 'package:simpleholmuskchat/src/service/api/url_options.dart';
 const String _path = "/profile";
 
 class ProfileService {
-  static Future<Profile> getProfile(String token) async {
+  Future<Profile> getProfile(String token) async {
     try {
       UrlOptions urlOptions = await UrlOptions.init(opEnvironment);
       http.Response response = await http.get(
@@ -28,7 +28,7 @@ class ProfileService {
     throw UnimplementedError();
   }
 
-  static Future<Profile> updateProfile(String token, Profile newProfile) async {
+  Future<Profile> updateProfile(String token, Profile newProfile) async {
     try {
       UrlOptions urlOptions = await UrlOptions.init(opEnvironment);
       http.Response response = await http.put(
