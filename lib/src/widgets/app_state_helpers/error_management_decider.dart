@@ -12,7 +12,7 @@ class ErrorManagementDecider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ErrorBlocModel errorBlocModel = Provider.of(context);
-    return errorBlocModel.hasError ? errorScreen : child;
+    ErrorBlocModel errorBlocModel = Provider.of<ErrorBlocModel>(context);
+    return errorBlocModel?.hasError ?? false ? errorScreen : child;
   }
 }

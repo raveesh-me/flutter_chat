@@ -23,6 +23,10 @@ class ErrorBloc {
     _errorBlocSubject.add(_errorBlocModel);
   }
 
+  ErrorBloc() {
+    clear();
+  }
+
   BehaviorSubject<ErrorBlocModel> _errorBlocSubject = BehaviorSubject();
   Stream<ErrorBlocModel> get stream => _errorBlocSubject.stream;
 

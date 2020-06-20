@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
 
 class ErrorManagementProvider extends StatefulWidget {
@@ -28,6 +29,9 @@ class _ErrorManagementProviderState extends State<ErrorManagementProvider> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return StreamProvider<ErrorBlocModel>.value(
+      value: errorBloc.stream,
+      child: widget.child,
+    );
   }
 }

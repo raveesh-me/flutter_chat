@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
 import '../../../app.dart';
 
 class HomeScreenDrawer extends StatelessWidget {
@@ -44,7 +45,9 @@ class HomeScreenDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(28.0).copyWith(left: 0),
               child: InkWell(
-                  onTap: () {},
+                  onTap: Provider.of<AccountBlocModel>(context)
+                      .bloc
+                      .logoutAndDeleteData,
                   child: Text(
                     "LOGOUT",
                     textAlign: TextAlign.start,

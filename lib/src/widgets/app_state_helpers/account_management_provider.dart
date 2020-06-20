@@ -54,11 +54,19 @@ class _AccountManagementProviderState extends State<AccountManagementProvider> {
   @override
   void initState() {
     super.initState();
-    accountBloc = AccountBloc(
-      getLoginService(),
-      getCreateService(),
-      Provider.of<ErrorBlocModel>(context, listen: false).bloc,
-    );
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final errorBlocModel = Provider.of<ErrorBlocModel>(context);
+    if (errorBlocModel != null) {
+      accountBloc = AccountBloc(
+        getLoginService(),
+        getCreateService(),
+        errorBlocModel.bloc,
+      );
+    }
   }
 
   @override
