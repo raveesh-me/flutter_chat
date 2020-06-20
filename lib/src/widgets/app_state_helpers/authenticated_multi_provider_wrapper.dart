@@ -86,11 +86,6 @@ class _AuthenticatedMultiProviderWrapperState
     accountBlocModel = Provider.of(context);
     errorBloc = Provider.of<ErrorBlocModel>(context).bloc;
     loadingBloc = Provider.of<LoadingBlocModel>(context).bloc;
-  }
-
-  @override
-  void initState() {
-    super.initState();
     friendsBloc = FriendsBloc(
       errorBloc: errorBloc,
       accountBlocModel: accountBlocModel,
@@ -109,6 +104,11 @@ class _AuthenticatedMultiProviderWrapperState
       loadingBloc: loadingBloc,
       profileService: getProfileService(),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override

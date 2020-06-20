@@ -20,7 +20,7 @@ class FriendsBloc {
   final FriendsService _friendsService;
   final ErrorBloc _errorBloc;
   final AccountBlocModel _accountBlocModel;
-  final LoadingBloc loadingBloc;
+  final LoadingBloc _loadingBloc;
 
   FriendsBlocModel _friendsBlocModel;
   set _sFriends(List<Friend> friends) {
@@ -39,13 +39,13 @@ class FriendsBloc {
   })  : this._errorBloc = errorBloc,
         this._accountBlocModel = accountBlocModel,
         this._friendsService = friendsService,
-        this.loadingBloc = loadingBloc {
+        this._loadingBloc = loadingBloc {
     _sFriends = [];
     init();
   }
 
   init() async {
-    loadingBloc.startLoading();
+    _loadingBloc.startLoading();
     try {
       if (_accountBlocModel.token == null ||
           _accountBlocModel.loginState == LoginState.loggedOut)
@@ -54,7 +54,7 @@ class FriendsBloc {
     } catch (e) {
       _errorBloc.setError('$e');
     } finally {
-      loadingBloc.stopLoading();
+      _loadingBloc.stopLoading();
     }
   }
 

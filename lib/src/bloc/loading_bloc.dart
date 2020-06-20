@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:ui';
 import 'package:rxdart/rxdart.dart';
 
 class LoadingBlocModel {
@@ -6,9 +6,6 @@ class LoadingBlocModel {
   final LoadingBloc bloc;
 
   LoadingBlocModel(this.isLoading, this.bloc);
-
-  @override
-  String toString() {}
 
   @override
   int get hashCode => hashValues(isLoading, 0);
