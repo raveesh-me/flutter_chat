@@ -25,8 +25,11 @@ class FriendsBloc {
   FriendsBlocModel _friendsBlocModel;
   set _sFriends(List<Friend> friends) {
     _friendsBlocModel = FriendsBlocModel(friends: friends, bloc: this);
-    _friendsBlocSubject.add(_friendsBlocModel);
+    _subject.add(_friendsBlocModel);
   }
+
+  final _subject = BehaviorSubject<FriendsBlocModel>();
+  Stream<FriendsBlocModel> get stream => _subject.stream;
 
   FriendsBloc({
     @required FriendsService friendsService,
@@ -40,9 +43,6 @@ class FriendsBloc {
     _sFriends = [];
     init();
   }
-
-  final _friendsBlocSubject = BehaviorSubject<FriendsBlocModel>();
-  Stream<FriendsBlocModel> get stream => _friendsBlocSubject.stream;
 
   init() async {
     loadingBloc.startLoading();
@@ -59,6 +59,6 @@ class FriendsBloc {
   }
 
   dispose() {
-    _friendsBlocSubject.close();
+    _subject.close();
   }
 }
