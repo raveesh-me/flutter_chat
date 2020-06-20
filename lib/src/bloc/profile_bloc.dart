@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/models/profile.dart';
 import 'package:simpleholmuskchat/src/service/api/profile_service.dart';
 
@@ -12,45 +14,62 @@ class ProfileBlocModel {
 }
 
 class ProfileBloc {
-  final ProfileService profileService;
-  final ErrorBloc errorBloc;
-  final AccountBlocModel accountBlocModel;
-  ProfileBloc(this.profileService, this.errorBloc, this.accountBlocModel);
-
   ProfileBlocModel _profileBlocModel;
+  final ProfileService _profileService;
+  final AccountBlocModel _accountBlocModel;
+  final ErrorBloc _errorBloc;
+  final LoadingBloc _loadingBloc;
 
-  set mProfile(Profile profile) {
+  set _sProfile(Profile profile) {
     _profileBlocModel = ProfileBlocModel(profile, this);
-    _profileBlocSubject.add(_profileBlocModel);
+    _subject.add(_profileBlocModel);
   }
 
-  final _profileBlocSubject = BehaviorSubject<ProfileBlocModel>();
-  Stream<ProfileBlocModel> get stream => _profileBlocSubject.stream;
+  final _subject = BehaviorSubject<ProfileBlocModel>();
+  Stream<ProfileBlocModel> get stream => _subject.stream;
+
+  ProfileBloc({
+    @required ProfileService profileService,
+    @required AccountBlocModel accountBlocModel,
+    @required ErrorBloc errorBloc,
+    @required LoadingBloc loadingBloc,
+  })  : this._profileService = profileService,
+        this._accountBlocModel = accountBlocModel,
+        this._errorBloc = errorBloc,
+        this._loadingBloc = loadingBloc {
+    _sProfile = Profile('id', 'name', 'avatarUrl');
+  }
 
   dispose() {
-    _profileBlocSubject.close();
+    _subject.close();
   }
 
   getProfile() async {
+    _loadingBloc.startLoading();
     try {
-      if (accountBlocModel.token == null ||
-          accountBlocModel.loginState == LoginState.loggedOut)
+      if (_accountBlocModel.token == null ||
+          _accountBlocModel.loginState == LoginState.loggedOut)
         throw Exception("Not logged In");
-      mProfile = await profileService.getProfile(accountBlocModel.token);
+      _sProfile = await _profileService.getProfile(_accountBlocModel.token);
     } catch (e) {
-      errorBloc.setError("$e");
+      _errorBloc.setError("$e");
+    } finally {
+      _loadingBloc.stopLoading();
     }
   }
 
   changeProfile(Profile profile) async {
+    _loadingBloc.startLoading();
     try {
-      if (accountBlocModel.token == null ||
-          accountBlocModel.loginState == LoginState.loggedOut)
+      if (_accountBlocModel.token == null ||
+          _accountBlocModel.loginState == LoginState.loggedOut)
         throw Exception("Not logged In");
-      mProfile =
-          await profileService.updateProfile(accountBlocModel.token, profile);
+      _sProfile =
+          await _profileService.updateProfile(_accountBlocModel.token, profile);
     } catch (e) {
-      errorBloc.setError("$e");
+      _errorBloc.setError("$e");
+    } finally {
+      _loadingBloc.stopLoading();
     }
   }
 }
