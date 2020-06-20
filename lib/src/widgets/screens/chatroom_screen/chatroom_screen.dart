@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simpleholmuskchat/src/models/friend.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/send_tools_row.dart';
 
 class ChatroomScreen extends StatelessWidget {
   static final String routeName = "/chatroom";
@@ -19,6 +20,20 @@ class ChatroomScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('${friend.name}'),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Flexible(
+              child: ListView(),
+            ),
+            SendToolsRow(),
+          ],
+        ),
+      ),
+    );
   }
 }

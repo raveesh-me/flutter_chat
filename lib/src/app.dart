@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         HomeScreen.routeName: (_) => HomeScreen(),
         ChatroomScreen.routeName: (_) =>
-            ChatroomScreen(friend: ChatroomScreen.friendFromContext(context)),
+            ChatroomScreen(friend: ChatroomScreen.friendFromContext(_)),
       },
     );
   }

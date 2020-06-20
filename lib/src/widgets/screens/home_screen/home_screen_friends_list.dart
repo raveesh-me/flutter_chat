@@ -33,7 +33,7 @@ class FriendFeatureCard extends StatelessWidget {
           Navigator.pushNamed(
             context,
             ChatroomScreen.routeName,
-            arguments: friend.id,
+            arguments: friend,
           );
         },
         child: Card(
