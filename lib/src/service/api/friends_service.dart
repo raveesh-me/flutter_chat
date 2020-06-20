@@ -8,18 +8,15 @@ import 'package:simpleholmuskchat/src/service/api/http_error_handler.dart';
 import 'package:simpleholmuskchat/src/service/api/url_options.dart';
 
 /// authenticates service
-abstract class FriendsService {
+class FriendsService {
   final _path = "/friends";
-  final String _token;
 
-  FriendsService(this._token);
-
-  Future<List<Friend>> getFriends([int page = 0]) async {
+  Future<List<Friend>> getFriends(String token, [int page = 0]) async {
     try {
       final urlOptions = await UrlOptions.init(opEnvironment);
       final http.Response response = await http.get(
         "${urlOptions.baseUrl}$_path/$page",
-        headers: {"token": _token},
+        headers: {"token": token},
       );
       if (response.statusCode == 200) {
         final List<dynamic> _list = List.from(json.decode(response.body));
