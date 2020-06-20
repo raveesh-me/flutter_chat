@@ -8,9 +8,6 @@ class LoadingBlocModel {
 }
 
 class LoadingBloc {
-  LoadingBloc() {
-    _loadingBlocModel = LoadingBlocModel(false, this);
-  }
   LoadingBlocModel _loadingBlocModel;
   set _isLoading(bool loading) {
     _loadingBlocModel = LoadingBlocModel(loading, this);
@@ -19,6 +16,10 @@ class LoadingBloc {
 
   BehaviorSubject<LoadingBlocModel> _subject = BehaviorSubject();
   Stream<LoadingBlocModel> get stream => _subject.stream;
+
+  LoadingBloc() {
+    _loadingBlocModel = LoadingBlocModel(false, this);
+  }
 
   dispose(){
     _subject.close();

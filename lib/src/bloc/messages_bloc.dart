@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/models/message.dart';
 import 'package:simpleholmuskchat/src/service/api/messages_service.dart';
 
@@ -14,46 +16,61 @@ class MessagesBlocModel {
 
 class MessagesBloc {
   final MessagesService _messagesService;
+  final AccountBlocModel _accountBlocModel;
   final ErrorBloc _errorBloc;
-  final AccountBlocModel accountBlocModel;
+  final LoadingBloc _loadingBloc;
 
   MessagesBlocModel _messagesBlocModel;
-  set messages(List<Message> messages) {
+  set _sMessages(List<Message> messages) {
     _messagesBlocModel = MessagesBlocModel(messages, this);
-    _messageBlocSubject.add(_messagesBlocModel);
+    _subject.add(_messagesBlocModel);
   }
 
-  MessagesBloc(this._messagesService, this._errorBloc, this.accountBlocModel);
+  BehaviorSubject<MessagesBlocModel> _subject = BehaviorSubject();
+  Stream<MessagesBlocModel> get stream => _subject.stream;
 
-  BehaviorSubject<MessagesBlocModel> _messageBlocSubject = BehaviorSubject();
-  Stream<MessagesBlocModel> get stream => _messageBlocSubject.stream;
+  MessagesBloc({
+    @required MessagesService messagesService,
+    @required AccountBlocModel accountBlocModel,
+    @required ErrorBloc errorBloc,
+    @required LoadingBloc loadingBloc,
+  })  : this._messagesService = messagesService,
+        this._accountBlocModel = accountBlocModel,
+        this._errorBloc = errorBloc,
+        this._loadingBloc = loadingBloc;
+
+  dispose() {
+    _subject.close();
+  }
 
   getMessages(String friendId) async {
+    _loadingBloc.startLoading();
     try {
-      if (accountBlocModel.token == null ||
-          accountBlocModel.loginState == LoginState.loggedOut)
+      if (_accountBlocModel.token == null ||
+          _accountBlocModel.loginState == LoginState.loggedOut)
         throw Exception("Not logged in");
-      messages =
-          await _messagesService.getMessages(accountBlocModel.token, friendId);
+      _sMessages =
+          await _messagesService.getMessages(_accountBlocModel.token, friendId);
       return;
     } catch (e) {
       _errorBloc.setError("Failed to fetch messages: $e");
+    } finally {
+      _loadingBloc.stopLoading();
     }
   }
 
   sendMessage(String friendId, Message message) async {
+    _loadingBloc.startLoading();
     try {
-      if (accountBlocModel.token == null ||
-          accountBlocModel.loginState == LoginState.loggedOut)
+      if (_accountBlocModel.token == null ||
+          _accountBlocModel.loginState == LoginState.loggedOut)
         throw Exception("Not logged in");
-      messages = await _messagesService.sendMessage(
-          accountBlocModel.token, friendId, message);
+      _sMessages = await _messagesService.sendMessage(
+          _accountBlocModel.token, friendId, message);
     } catch (e) {
       _errorBloc.setError("Failed to fetch messages: $e");
+    } finally {
+      _loadingBloc.stopLoading();
     }
-  }
-
-  dispose() {
-    _messageBlocSubject.close();
   }
 }
