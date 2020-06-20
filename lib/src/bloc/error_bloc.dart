@@ -1,14 +1,14 @@
 import 'package:rxdart/rxdart.dart';
 
 class ErrorBlocModel {
-  final bool isError;
+  final bool hasError;
   final String errorMessage;
   final Function remedy;
   final String remedyLabel;
   final ErrorBloc bloc;
 
   const ErrorBlocModel(
-    this.isError,
+    this.hasError,
     this.errorMessage,
     this.remedy,
     this.remedyLabel,

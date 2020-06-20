@@ -39,5 +39,4 @@ class HomeScreenProfilePage extends StatelessWidget {
       ),
     );
   }
-
 }

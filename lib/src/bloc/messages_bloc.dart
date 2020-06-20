@@ -26,6 +26,7 @@ class MessagesBloc {
   MessagesBloc(this._messagesService, this._errorBloc, this.accountBlocModel);
 
   BehaviorSubject<MessagesBlocModel> _messageBlocSubject = BehaviorSubject();
+  Stream<MessagesBlocModel> get stream => _messageBlocSubject.stream;
 
   getMessages(String friendId) async {
     try {

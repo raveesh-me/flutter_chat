@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:simpleholmuskchat/src/models/profile.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/home_screen/home_screen_profile_page.dart';
 import 'package:simpleholmuskchat/external/widget_test_extensions.dart';
+
 main() {
   group("User profile", () {
     testWidgets("profile page displays the user passed by the provider",

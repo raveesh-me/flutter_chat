@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:simpleholmuskchat/src/bloc/profile_bloc.dart';
-import 'package:simpleholmuskchat/external/widget_test_extensions.dart';
-import 'package:simpleholmuskchat/src/service/api/create_service.dart';
-import 'package:simpleholmuskchat/src/service/api/friends_service.dart';
-import 'package:simpleholmuskchat/src/service/api/login_service.dart';
-import 'package:simpleholmuskchat/src/service/api/messages_service.dart';
-import 'package:simpleholmuskchat/src/service/api/profile_service.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/account_management_decider.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/account_management_provider.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/authenticated_multi_provider_wrapper.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management_decider.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management_provider.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/chatroom_screen.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/error_screen/error_screen.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/login_screen/login_screen.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/root_screen/root_screen.dart';
-
-import 'bloc/account_bloc.dart';
-import 'bloc/error_bloc.dart';
-import 'bloc/friends_bloc.dart';
-import 'bloc/messages_bloc.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -22,32 +17,6 @@ class MyApp extends StatefulWidget {
 typedef void AppBrightnessToggle();
 
 class _MyAppState extends State<MyApp> {
-  /// All the app services:
-  CreateService createService;
-  LoginService loginService;
-  FriendsService friendsService;
-  MessagesService messagesService;
-  ProfileService profileService;
-
-  /// All the app BLoCs
-  ErrorBloc errorBloc;
-  AccountBloc accountBloc;
-  FriendsBloc friendsBloc;
-  MessagesBloc messagesBloc;
-  ProfileBloc profileBloc;
-
-  initializeServices() {
-    createService = CreateService();
-    loginService = LoginService();
-    friendsService = FriendsService();
-    messagesService = MessagesService();
-    profileService = ProfileService();
-  }
-
-  initializeBlocs() async {
-    errorBloc = ErrorBloc();
-  }
-
   /// we are ignoring the platform setting at this point.
   /// we still have to figure out a way to set correct themeData from [MediaQuery.of(context).platformBrightness]
   /// since we are passing theme to materialApp, there is no way to check this setting above material app.
@@ -66,8 +35,17 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (BuildContext context, Widget child) =>
-          child.wrapWithMultiProvider(providers: []),
+      builder: (BuildContext context, Widget child) => ErrorManagementProvider(
+        child: ErrorManagementDecider(
+          errorScreen: ErrorScreen(),
+          child: AccountManagementProvider(
+            child: AccountManagementDecider(
+              loggedInScreen: AuthenticatedMultiProviderWraper(child: child),
+              loggedOutScreen: LoginScreen(),
+            ),
+          ),
+        ),
+      ),
       theme: ThemeData(brightness: appBrightness, primarySwatch: Colors.green),
       initialRoute: RootScreen.routeName,
       routes: {
