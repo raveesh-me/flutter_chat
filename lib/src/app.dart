@@ -6,8 +6,8 @@ import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management
 import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management_provider.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/chatroom_screen.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/error_screen/error_screen.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/home_screen/home_screen.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/login_screen/login_screen.dart';
-import 'package:simpleholmuskchat/src/widgets/screens/root_screen/root_screen.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -47,9 +47,9 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       theme: ThemeData(brightness: appBrightness, primarySwatch: Colors.green),
-      initialRoute: RootScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
-        RootScreen.routeName: (_) => RootScreen(),
+        HomeScreen.routeName: (_) => HomeScreen(),
         ChatroomScreen.routeName: (_) =>
             ChatroomScreen(friend: ChatroomScreen.friendFromContext(context)),
       },
