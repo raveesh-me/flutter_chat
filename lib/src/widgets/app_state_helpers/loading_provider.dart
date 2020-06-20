@@ -28,7 +28,7 @@ class _LoadingProviderState extends State<LoadingProvider> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider.value(
+    return StreamProvider<LoadingBlocModel>.value(
       value: loadingBloc.stream,
       child: widget.child,
     );

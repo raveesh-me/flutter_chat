@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:simpleholmuskchat/op_environments.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/service/api/create_service.dart';
 import 'package:simpleholmuskchat/src/service/api/login_service.dart';
 import 'package:simpleholmuskchat/src/service/mock_services/json_create_service.dart';
@@ -62,9 +63,10 @@ class _AccountManagementProviderState extends State<AccountManagementProvider> {
     final errorBlocModel = Provider.of<ErrorBlocModel>(context);
     if (errorBlocModel != null) {
       accountBloc = AccountBloc(
-        getLoginService(),
-        getCreateService(),
-        errorBlocModel.bloc,
+        loadingBloc: Provider.of<LoadingBlocModel>(context).bloc,
+        createService: getCreateService(),
+        errorBloc: Provider.of<ErrorBlocModel>(context).bloc,
+        loginService: getLoginService(),
       );
     }
   }

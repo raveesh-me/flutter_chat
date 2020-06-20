@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:rxdart/rxdart.dart';
 
 class LoadingBlocModel {
@@ -5,6 +6,17 @@ class LoadingBlocModel {
   final LoadingBloc bloc;
 
   LoadingBlocModel(this.isLoading, this.bloc);
+
+  @override
+  String toString() {}
+
+  @override
+  int get hashCode => hashValues(isLoading, 0);
+
+  @override
+  bool operator ==(Object other) {
+    return other is LoadingBlocModel && other.isLoading == isLoading;
+  }
 }
 
 class LoadingBloc {
@@ -18,10 +30,10 @@ class LoadingBloc {
   Stream<LoadingBlocModel> get stream => _subject.stream;
 
   LoadingBloc() {
-    _loadingBlocModel = LoadingBlocModel(false, this);
+    _isLoading = false;
   }
 
-  dispose(){
+  dispose() {
     _subject.close();
   }
 

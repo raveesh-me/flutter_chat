@@ -4,6 +4,7 @@ import 'package:simpleholmuskchat/op_environments.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/friends_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/messages_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/profile_bloc.dart';
 import 'package:simpleholmuskchat/src/service/api/friends_service.dart';
@@ -29,6 +30,7 @@ class _AuthenticatedMultiProviderWrapperState
   MessagesBloc messagesBloc;
   ProfileBloc profileBloc;
   ErrorBloc errorBloc;
+  LoadingBloc loadingBloc;
 
   AccountBlocModel accountBlocModel;
 
@@ -83,25 +85,29 @@ class _AuthenticatedMultiProviderWrapperState
     super.didChangeDependencies();
     accountBlocModel = Provider.of(context);
     errorBloc = Provider.of<ErrorBlocModel>(context).bloc;
+    loadingBloc = Provider.of<LoadingBlocModel>(context).bloc;
   }
 
   @override
   void initState() {
     super.initState();
     friendsBloc = FriendsBloc(
-      getFriendsService(),
-      errorBloc,
-      accountBlocModel,
+      errorBloc: errorBloc,
+      accountBlocModel: accountBlocModel,
+      friendsService: getFriendsService(),
+      loadingBloc: loadingBloc,
     );
     messagesBloc = MessagesBloc(
-      getMessagesService(),
-      errorBloc,
-      accountBlocModel,
+      loadingBloc: loadingBloc,
+      accountBlocModel: accountBlocModel,
+      errorBloc: errorBloc,
+      messagesService: getMessagesService(),
     );
     profileBloc = ProfileBloc(
-      getProfileService(),
-      errorBloc,
-      accountBlocModel,
+      errorBloc: errorBloc,
+      accountBlocModel: accountBlocModel,
+      loadingBloc: loadingBloc,
+      profileService: getProfileService(),
     );
   }
 

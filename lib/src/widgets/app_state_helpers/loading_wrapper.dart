@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
@@ -9,7 +11,18 @@ class LoadingWrapper extends StatelessWidget {
   const LoadingWrapper({Key key, @required this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    bool isLoading = Provider.of<LoadingBlocModel>(context)?.isLoading ?? true;
-    return isLoading ? LoadingScreen() : child;
+    final LoadingBlocModel loadingBlocModel = Provider.of(context);
+    log('$loadingBlocModel');
+//    bool isLoading = Provider.of<LoadingBlocModel>(context).isLoading;
+//    log('$isLoading');
+//    return isLoading ? LoadingScreen() : child;
+    return Scaffold(
+      body: LoadingScreen(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          loadingBlocModel.bloc.startLoading();
+        },
+      ),
+    );
   }
 }
