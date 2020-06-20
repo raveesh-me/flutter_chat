@@ -4,6 +4,8 @@ import 'package:simpleholmuskchat/src/widgets/app_state_helpers/account_manageme
 import 'package:simpleholmuskchat/src/widgets/app_state_helpers/authenticated_multi_provider_wrapper.dart';
 import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management_decider.dart';
 import 'package:simpleholmuskchat/src/widgets/app_state_helpers/error_management_provider.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/loading_provider.dart';
+import 'package:simpleholmuskchat/src/widgets/app_state_helpers/loading_wrapper.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/chatroom_screen.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/error_screen/error_screen.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/home_screen/home_screen.dart';
@@ -35,13 +37,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (BuildContext context, Widget child) => ErrorManagementProvider(
-        child: ErrorManagementDecider(
-          errorScreen: ErrorScreen(),
-          child: AccountManagementProvider(
-            child: AccountManagementDecider(
-              loggedInScreen: AuthenticatedMultiProviderWraper(child: child),
-              loggedOutScreen: LoginScreen(),
+      builder: (BuildContext context, Widget child) => LoadingProvider(
+        child: LoadingWrapper(
+          child: ErrorManagementProvider(
+            child: ErrorManagementDecider(
+              errorScreen: ErrorScreen(),
+              child: AccountManagementProvider(
+                child: AccountManagementDecider(
+                  loggedInScreen:
+                      AuthenticatedMultiProviderWraper(child: child),
+                  loggedOutScreen: LoginScreen(),
+                ),
+              ),
             ),
           ),
         ),
