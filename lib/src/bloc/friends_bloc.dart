@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/models/friend.dart';
 import 'package:simpleholmuskchat/src/service/api/friends_service.dart';
 
@@ -17,28 +18,43 @@ class FriendsBlocModel {
 /// The business logic component responsible for all the functions
 class FriendsBloc {
   final FriendsService _friendsService;
-  final ErrorBloc errorBloc;
-  final AccountBlocModel accountBlocModel;
-  FriendsBloc(this._friendsService, this.errorBloc, this.accountBlocModel);
+  final ErrorBloc _errorBloc;
+  final AccountBlocModel _accountBlocModel;
+  final LoadingBloc loadingBloc;
 
   FriendsBlocModel _friendsBlocModel;
-  set _friends(List<Friend> friends) {
+  set _sFriends(List<Friend> friends) {
     _friendsBlocModel = FriendsBlocModel(friends: friends, bloc: this);
     _friendsBlocSubject.add(_friendsBlocModel);
+  }
+
+  FriendsBloc({
+    @required FriendsService friendsService,
+    @required ErrorBloc errorBloc,
+    @required AccountBlocModel accountBlocModel,
+    @required LoadingBloc loadingBloc,
+  })  : this._errorBloc = errorBloc,
+        this._accountBlocModel = accountBlocModel,
+        this._friendsService = friendsService,
+        this.loadingBloc = loadingBloc {
+    _sFriends = [];
+    init();
   }
 
   final _friendsBlocSubject = BehaviorSubject<FriendsBlocModel>();
   Stream<FriendsBlocModel> get stream => _friendsBlocSubject.stream;
 
-  /// Injecting the service, this makes it easy to deal with environments etc
-  init(FriendsService friendsService) async {
+  init() async {
+    loadingBloc.startLoading();
     try {
-      if (accountBlocModel.token == null ||
-          accountBlocModel.loginState == LoginState.loggedOut)
+      if (_accountBlocModel.token == null ||
+          _accountBlocModel.loginState == LoginState.loggedOut)
         throw Exception("Not logged in");
-      _friends = await _friendsService.getFriends(accountBlocModel.token);
+      _sFriends = await _friendsService.getFriends(_accountBlocModel.token);
     } catch (e) {
-      errorBloc.setError('$e');
+      _errorBloc.setError('$e');
+    } finally {
+      loadingBloc.stopLoading();
     }
   }
 
