@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
+import 'package:simpleholmuskchat/src/bloc/loading_bloc.dart';
 import 'package:simpleholmuskchat/src/service/api/create_service.dart';
 import 'package:simpleholmuskchat/src/service/api/login_service.dart';
 
@@ -25,62 +26,93 @@ class AccountBloc {
   final LoginService loginService;
   final CreateService createService;
   final ErrorBloc errorBloc;
+  final LoadingBloc loadingBloc;
   SharedPreferences _preferences;
 
   AccountBlocModel _accountBlocModel;
+  set _sAccountBlocModel(AccountBlocModel accountBlocModel) {
+    _accountBlocModel = accountBlocModel;
+    _subject.add(_accountBlocModel);
+  }
+
+  final _subject = BehaviorSubject<AccountBlocModel>();
+  Stream<AccountBlocModel> get stream => _subject.stream;
 
   /// we need these services, initialized, to be able to perform activities
-  AccountBloc(this.loginService, this.createService, this.errorBloc) {
+  AccountBloc(
+      this.loginService, this.createService, this.errorBloc, this.loadingBloc) {
+    _sAccountBlocModel = AccountBlocModel(
+        token: null, loginState: LoginState.loggedOut, bloc: this);
     init();
   }
 
-  set accountBlocModel(AccountBlocModel accountBlocModel) {
-    _accountBlocModel = accountBlocModel;
-    _accountBlocSubject.add(_accountBlocModel);
-  }
-
-  final _accountBlocSubject = BehaviorSubject<AccountBlocModel>();
-  Stream<AccountBlocModel> get stream => _accountBlocSubject.stream;
-
   init() async {
-    accountBlocModel = AccountBlocModel(
-        token: null, loginState: LoginState.loggedOut, bloc: this);
-    // fetch the token from shared preferences
-    _preferences = await SharedPreferences.getInstance();
-    final token = _preferences.getString(AUTH_TOKEN_KEY);
-    if (token == null)
-      return;
-    else
-      accountBlocModel = AccountBlocModel(
-          token: token, loginState: LoginState.loggedIn, bloc: this);
-  }
-
-  login(String email, String password) async {
-    final newToken = await loginService.signInGetToken(email, password);
-    _preferences.setString(AUTH_TOKEN_KEY, newToken);
-    accountBlocModel = AccountBlocModel(
-        token: newToken, loginState: LoginState.loggedIn, bloc: this);
-  }
-
-  createAccount(String email, String password) async {
-    final newToken =
-        await createService.createAccountAndGetToken(email, password);
-    _preferences.setString(AUTH_TOKEN_KEY, newToken);
-    accountBlocModel = AccountBlocModel(
-        token: newToken, loginState: LoginState.loggedIn, bloc: this);
-  }
-
-  logoutAndDeleteData() async {
-    final signedOut =
-        await loginService.signOutAndDelete(_accountBlocModel.token);
-    final clearedPreference = await _preferences.clear();
-    if (!(signedOut && clearedPreference))
-      errorBloc.setError("Could not log out\nRestart app and try again");
-    accountBlocModel = AccountBlocModel(
-        token: null, loginState: LoginState.loggedOut, bloc: this);
+    loadingBloc.startLoading();
+    try {
+      _sAccountBlocModel = AccountBlocModel(
+          token: null, loginState: LoginState.loggedOut, bloc: this);
+      // fetch the token from shared preferences
+      _preferences = await SharedPreferences.getInstance();
+      final token = _preferences.getString(AUTH_TOKEN_KEY);
+      if (token == null)
+        return;
+      else
+        _sAccountBlocModel = AccountBlocModel(
+            token: token, loginState: LoginState.loggedIn, bloc: this);
+    } catch (error) {
+      errorBloc.setError("$error");
+    } finally {
+      loadingBloc.stopLoading();
+    }
   }
 
   dispose() {
-    _accountBlocSubject.close();
+    _subject.close();
+  }
+
+  login(String email, String password) async {
+    loadingBloc.startLoading();
+    try {
+      final newToken = await loginService.signInGetToken(email, password);
+      _preferences.setString(AUTH_TOKEN_KEY, newToken);
+      _sAccountBlocModel = AccountBlocModel(
+          token: newToken, loginState: LoginState.loggedIn, bloc: this);
+    } catch (e) {
+      errorBloc.setError("$e");
+    } finally {
+      loadingBloc.stopLoading();
+    }
+  }
+
+  createAccount(String email, String password) async {
+    loadingBloc.startLoading();
+    try {
+      final newToken =
+          await createService.createAccountAndGetToken(email, password);
+      _preferences.setString(AUTH_TOKEN_KEY, newToken);
+      _sAccountBlocModel = AccountBlocModel(
+          token: newToken, loginState: LoginState.loggedIn, bloc: this);
+    } catch (e) {
+      errorBloc.setError("$e");
+    } finally {
+      loadingBloc.stopLoading();
+    }
+  }
+
+  logoutAndDeleteData() async {
+    loadingBloc.startLoading();
+    try {
+      final signedOut =
+          await loginService.signOutAndDelete(_accountBlocModel.token);
+      final clearedPreference = await _preferences.clear();
+      if (!(signedOut && clearedPreference))
+        errorBloc.setError("Could not log out\nRestart app and try again");
+      _sAccountBlocModel = AccountBlocModel(
+          token: null, loginState: LoginState.loggedOut, bloc: this);
+    } catch (e) {
+      errorBloc.setError('$e');
+    } finally {
+      loadingBloc.stopLoading();
+    }
   }
 }

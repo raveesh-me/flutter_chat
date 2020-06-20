@@ -18,24 +18,24 @@ class ErrorBlocModel {
 
 class ErrorBloc {
   ErrorBlocModel _errorBlocModel;
-  set errorBlocModel(ErrorBlocModel newEBM) {
+  set _sErrorBlocModel(ErrorBlocModel newEBM) {
     _errorBlocModel = newEBM;
     _errorBlocSubject.add(_errorBlocModel);
   }
 
   ErrorBloc() {
-    clear();
+    _sErrorBlocModel = ErrorBlocModel(false, null, null, null, this);
   }
 
   BehaviorSubject<ErrorBlocModel> _errorBlocSubject = BehaviorSubject();
   Stream<ErrorBlocModel> get stream => _errorBlocSubject.stream;
 
   clear() {
-    errorBlocModel = ErrorBlocModel(false, null, null, null, this);
+    _sErrorBlocModel = ErrorBlocModel(false, null, null, null, this);
   }
 
   setError(String errorMessage, [Function remedy, String remedyLabel]) {
-    errorBlocModel =
+    _sErrorBlocModel =
         ErrorBlocModel(true, errorMessage, remedy, remedyLabel, this);
   }
 
