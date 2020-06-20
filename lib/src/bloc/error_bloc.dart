@@ -26,7 +26,7 @@ class ErrorBloc {
   BehaviorSubject<ErrorBlocModel> _errorBlocSubject = BehaviorSubject();
   Stream<ErrorBlocModel> get stream => _errorBlocSubject.stream;
 
-  _clear() {
+  clear() {
     errorBlocModel = ErrorBlocModel(false, null, null, null, this);
   }
 

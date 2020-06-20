@@ -36,5 +36,6 @@ class UrlOptions {
     } catch (e) {
       log("Error: $e", name: "URL OPTIONS");
     }
+    throw UnimplementedError();
   }
 }

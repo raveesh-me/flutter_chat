@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:simpleholmuskchat/src/bloc/profile_bloc.dart';
 import 'package:simpleholmuskchat/external/widget_test_extensions.dart';
-import 'package:simpleholmuskchat/src/screens/chatroom_screen/chatroom_screen.dart';
-import 'package:simpleholmuskchat/src/screens/root_screen/root_screen.dart';
 import 'package:simpleholmuskchat/src/service/api/create_service.dart';
 import 'package:simpleholmuskchat/src/service/api/friends_service.dart';
 import 'package:simpleholmuskchat/src/service/api/login_service.dart';
 import 'package:simpleholmuskchat/src/service/api/messages_service.dart';
 import 'package:simpleholmuskchat/src/service/api/profile_service.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/chatroom_screen.dart';
+import 'package:simpleholmuskchat/src/widgets/screens/root_screen/root_screen.dart';
 
 import 'bloc/account_bloc.dart';
 import 'bloc/error_bloc.dart';

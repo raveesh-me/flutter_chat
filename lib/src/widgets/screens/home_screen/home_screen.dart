@@ -1,10 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:simpleholmuskchat/src/screens/home_screen/home_screen_bottom_nav_bar.dart';
-import 'package:simpleholmuskchat/src/screens/home_screen/home_screen_drawer.dart';
-import 'package:simpleholmuskchat/src/screens/home_screen/home_screen_friends_list.dart';
-import 'package:simpleholmuskchat/src/screens/home_screen/home_screen_profile_page.dart';
+
+import 'home_screen_bottom_nav_bar.dart';
+import 'home_screen_drawer.dart';
+import 'home_screen_friends_list.dart';
+import 'home_screen_profile_page.dart';
 
 enum NavigablePage { list, me }
 
