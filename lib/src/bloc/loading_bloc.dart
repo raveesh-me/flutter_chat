@@ -30,7 +30,7 @@ class LoadingBloc {
   Stream<LoadingBlocModel> get stream => _subject.stream;
 
   LoadingBloc() {
-    _isLoading = false;
+    stopLoading();
   }
 
   dispose() {

@@ -14,7 +14,7 @@ class AccountManagementDecider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AccountBlocModel accountBlocModel = Provider.of(context);
-    if (accountBlocModel.loginState == null) {
+    if (accountBlocModel?.loginState == null) {
       return LoadingScreen();
     }
     if (accountBlocModel.loginState == LoginState.loggedOut)
