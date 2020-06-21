@@ -4,8 +4,7 @@ Holmusk Submission
 
 ## Spec
 
-Requirements:
-
+Scenario:
 - [x] User can Login or Create account to use app features.
 - [x] User can view and edit their profile.
 - [x] User can refresh their profile.
@@ -16,9 +15,16 @@ Requirements:
 - [x] User can toggle app to dark / light mode.
 - [x] User can logout and clear all data.
 
-## Process
+## Backend Readiness
+- [x] Host: com.simple.chat, scheme: https, port: 433
+- [x] Document-type: json
+- [x] 200 -> response success and return corresponding data
+- [x] 400 -> bad request parameters (shame on you).
+- [x] 401 -> sessions expired (user must re login to use the app)
+- [x] 404 -> endpoints not found (are you lost?)
+- [x] 500 -> Internal server errors (it's just a glitch)
 
-* Start by implementing the wireframe without any state.
-* we are in a hurry so we will also keep declaring models simultaneously
-* some source get won't hurt. json_serializable is enough for this one.
-
+## Objectives
+- [x] You are expected to design a skeleton app in a well structured, robust, modular and testable way.
+- [x] This is a mock app, the UIs only need to be functional. It can be as ugly as you want.
+- [ ] You are expected to test / mock all the api communication to server, so app can seamlessly integrated with live server when it's ready.
