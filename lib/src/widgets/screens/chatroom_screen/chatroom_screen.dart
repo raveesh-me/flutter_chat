@@ -4,6 +4,8 @@ import 'package:simpleholmuskchat/src/bloc/messages_bloc.dart';
 import 'package:simpleholmuskchat/src/models/friend.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/send_tools_row.dart';
 
+import 'message_card.dart';
+
 class ChatroomScreen extends StatefulWidget {
   static final String routeName = "/chatroom";
   static Friend friendFromContext(BuildContext context) {
@@ -31,6 +33,13 @@ class _ChatroomScreenState extends State<ChatroomScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     messagesBlocModel = Provider.of<MessagesBlocModel>(context);
+    messagesBlocModel.bloc.getMessages(widget.friend.id);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    messagesBlocModel.bloc.clear();
   }
 
   @override
@@ -43,7 +52,11 @@ class _ChatroomScreenState extends State<ChatroomScreen> {
         child: Column(
           children: [
             Flexible(
-              child: ListView(),
+              child: ListView(
+                children: messagesBlocModel.messages
+                    .map((message) => MessageCard(message: message))
+                    .toList(),
+              ),
             ),
             SendToolsRow(),
           ],

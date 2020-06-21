@@ -12,10 +12,13 @@ class HomeScreenFriendsList extends StatelessWidget {
     if (friendsBlocModel == null)
       return LoadingScreen();
     else
-      return ListView(
-        children: friendsBlocModel.friends
-            .map((Friend friend) => FriendFeatureCard(friend: friend))
-            .toList(),
+      return RefreshIndicator(
+        onRefresh: () => friendsBlocModel.bloc.init(),
+        child: ListView(
+          children: friendsBlocModel.friends
+              .map((Friend friend) => FriendFeatureCard(friend: friend))
+              .toList(),
+        ),
       );
   }
 }

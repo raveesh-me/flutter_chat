@@ -124,6 +124,7 @@ class _AuthenticatedMultiProviderWrapperState
           value: friendsBloc.stream,
         ),
         StreamProvider<MessagesBlocModel>.value(
+          initialData: MessagesBlocModel([], messagesBloc),
           value: messagesBloc.stream,
         ),
         StreamProvider<ProfileBlocModel>.value(

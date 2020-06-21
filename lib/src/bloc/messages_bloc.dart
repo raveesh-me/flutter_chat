@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/error_bloc.dart';
@@ -19,6 +21,7 @@ class MessagesBloc {
   final AccountBlocModel _accountBlocModel;
   final ErrorBloc _errorBloc;
   final LoadingBloc _loadingBloc;
+  Timer _refreshMessagesTimer;
 
   MessagesBlocModel _messagesBlocModel;
   set _sMessages(List<Message> messages) {
@@ -37,13 +40,15 @@ class MessagesBloc {
   })  : this._messagesService = messagesService,
         this._accountBlocModel = accountBlocModel,
         this._errorBloc = errorBloc,
-        this._loadingBloc = loadingBloc {
-    _subject =
-        BehaviorSubject<MessagesBlocModel>.seeded(MessagesBlocModel([], this));
+        this._loadingBloc = loadingBloc;
+
+  clear() {
+    _refreshMessagesTimer?.cancel();
   }
 
   dispose() {
     _subject.close();
+    _refreshMessagesTimer?.cancel();
   }
 
   getMessages(String friendId) async {
@@ -59,6 +64,9 @@ class MessagesBloc {
       _errorBloc.setError("Failed to fetch messages: $e");
     } finally {
       _loadingBloc.stopLoading();
+      _refreshMessagesTimer = Timer(Duration(seconds: 5), () {
+        getMessages(friendId);
+      });
     }
   }
 
