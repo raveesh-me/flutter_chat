@@ -17,8 +17,10 @@ class SignupBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(18.0).copyWith(bottom: 8),
           child: RaisedButton(
-            onPressed:
-                Provider.of<AccountBlocModel>(context).bloc.createAccount(
+            onPressed: () =>
+                Provider.of<AccountBlocModel>(context, listen: false)
+                    .bloc
+                    .createAccount(
                       "something@somesite.com",
                       "somePassword",
                     ),

@@ -22,7 +22,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: isSignup
-          ? SignupBody()
+          ? SignupBody(
+              toggleSignup: toggleSignup,
+            )
           : LoginBody(
               toggleSignup: toggleSignup,
             ),

@@ -17,10 +17,13 @@ class LoginBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(18.0).copyWith(bottom: 8),
           child: RaisedButton(
-            onPressed: () => Provider.of<AccountBlocModel>(context).bloc.login(
-                  "something@somesite.com",
-                  "somepassword",
-                ),
+            onPressed: () =>
+                Provider.of<AccountBlocModel>(context, listen: false)
+                    .bloc
+                    .login(
+                      "something@somesite.com",
+                      "somepassword",
+                    ),
             child: Center(child: Text("LOGIN")),
           ),
         ),
