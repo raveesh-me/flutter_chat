@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
@@ -66,6 +68,7 @@ class ProfileBloc {
         throw Exception("Not logged In");
       _sProfile =
           await _profileService.updateProfile(_accountBlocModel.token, profile);
+      log("${_profileBlocModel.profile}");
     } catch (e) {
       _errorBloc.setError("$e");
     } finally {

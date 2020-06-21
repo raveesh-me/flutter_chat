@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:simpleholmuskchat/src/bloc/messages_bloc.dart';
 import 'package:simpleholmuskchat/src/models/friend.dart';
 import 'package:simpleholmuskchat/src/widgets/screens/chatroom_screen/send_tools_row.dart';
 
-class ChatroomScreen extends StatelessWidget {
+class ChatroomScreen extends StatefulWidget {
   static final String routeName = "/chatroom";
   static Friend friendFromContext(BuildContext context) {
     // extract from ModalRoute
@@ -19,10 +21,23 @@ class ChatroomScreen extends StatelessWidget {
   const ChatroomScreen({Key key, @required this.friend}) : super(key: key);
 
   @override
+  _ChatroomScreenState createState() => _ChatroomScreenState();
+}
+
+class _ChatroomScreenState extends State<ChatroomScreen> {
+  MessagesBlocModel messagesBlocModel;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    messagesBlocModel = Provider.of<MessagesBlocModel>(context);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${friend.name}'),
+        title: Text('${widget.friend.name}'),
       ),
       body: SafeArea(
         child: Column(

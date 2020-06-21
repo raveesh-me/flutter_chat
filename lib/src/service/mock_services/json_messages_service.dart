@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:simpleholmuskchat/src/models/message.dart';
 import 'package:simpleholmuskchat/src/service/api/messages_service.dart';
 
@@ -8,11 +10,11 @@ class JsonMessagesService implements MessagesService {
         List.generate(
           20,
           (index) => Message(
-            'id',
             'message',
-            'imageUrl',
+            Uint8List(34),
             'senderId',
             DateTime.now(),
+            'id',
           ),
         ),
       );
@@ -24,11 +26,11 @@ class JsonMessagesService implements MessagesService {
         List.generate(
           21,
           (index) => Message(
-            'id',
             'message',
-            'imageUrl',
+            Uint8List(500),
             'senderId',
             DateTime.now(),
+            'id',
           ),
         ),
       );

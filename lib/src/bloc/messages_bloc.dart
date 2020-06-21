@@ -37,7 +37,10 @@ class MessagesBloc {
   })  : this._messagesService = messagesService,
         this._accountBlocModel = accountBlocModel,
         this._errorBloc = errorBloc,
-        this._loadingBloc = loadingBloc;
+        this._loadingBloc = loadingBloc {
+    _subject =
+        BehaviorSubject<MessagesBlocModel>.seeded(MessagesBlocModel([], this));
+  }
 
   dispose() {
     _subject.close();

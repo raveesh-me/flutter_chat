@@ -45,3 +45,4 @@ app.*.map.json
 
 # add all the generated files to gitignore
 **/*.g.dart
+!.idea/

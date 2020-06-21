@@ -4,8 +4,9 @@ part 'message.g.dart';
 
 @JsonSerializable()
 class Message {
-  Message(this.id, this.message, this.imageUrl, this.senderId, this.timeSent);
-  String id, message, imageUrl, senderId;
+  Message(this.message, [this.image, this.senderId, this.timeSent, this.id]);
+  String id, message, senderId;
+  List<int> image;
   DateTime timeSent;
 
   factory Message.fromJson(Map<String, dynamic> json) =>
