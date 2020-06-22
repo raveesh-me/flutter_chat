@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/all_tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/tests_in_test.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bloc_tests/error_bloc_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bloc_tests/friends_bloc_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bloc_tests/messages_bloc_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bloc_tests/profile_bloc_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/service_tests/api_services/friends_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/service_tests/api_services/friends_service_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/service_tests/api_services/login_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/service_tests/api_services/login_service_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/service_tests/api_services/messages_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/service_tests/api_services/messages_service_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/service_tests/api_services/profile_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/service_tests/api_services/profile_service_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,13 +113,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update: scaffolds the app with it's screen.">
-      <created>1592053064469</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1592053064469</updated>
     </task>
     <task id="LOCAL-00005" summary="update: adds basic plugins">
       <created>1592053734165</created>
@@ -457,11 +450,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592786491550</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="test: adds tests for service constructors">
+      <created>1592787780893</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1592787780893</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: around token =&gt; _token" />
     <MESSAGE value="update: account_bloc.dart, error_bloc.dart" />
     <MESSAGE value="update: changes to responsibility of token, authenticated blocs will need AccountBlocModel to be injected and pass tokens to their service calls" />
     <MESSAGE value="update: updates the Json mock service to reflect changes in the API service" />
@@ -486,7 +485,8 @@
     <MESSAGE value="update: adds objectives to docs and vcs data to git" />
     <MESSAGE value="doc: updates to README.md" />
     <MESSAGE value="doc: adds test and release configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc: adds test and release configurations" />
+    <MESSAGE value="test: adds tests for service constructors" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: adds tests for service constructors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -518,10 +518,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592786491502">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592787780835">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786491502" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787780835" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" key="DiffContextDialog" timestamp="1592617245577">
@@ -532,34 +532,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592787685711">
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592790539739">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787685711" />
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539739" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592787685711">
+    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592790539738">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787685711" />
+    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539738" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592787685711">
+    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592790539738">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787685711" />
+    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539738" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592787685711">
+    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592790539739">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787685711" />
+    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539739" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592786492841">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592787784470">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786492841" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787784470" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
