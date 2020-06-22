@@ -17,6 +17,7 @@ class FriendsBlocModel {
 
 /// The business logic component responsible for all the functions
 class FriendsBloc {
+  final _name = "FRIENDS BLOC";
   final FriendsService _friendsService;
   final ErrorBloc _errorBloc;
   final AccountBlocModel _accountBlocModel;
@@ -52,7 +53,7 @@ class FriendsBloc {
         throw Exception("Not logged in");
       _sFriends = await _friendsService.getFriends(_accountBlocModel.token);
     } catch (e) {
-      _errorBloc.setError('$e');
+      _errorBloc.setError('$e', _name);
     } finally {
       _loadingBloc.stopLoading();
     }

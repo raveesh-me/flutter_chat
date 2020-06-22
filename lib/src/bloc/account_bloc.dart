@@ -31,6 +31,7 @@ class AccountBlocModel {
 }
 
 class AccountBloc {
+  final _name = "ACCOUNT BLOC";
   final LoginService _loginService;
   final CreateService _createService;
   final ErrorBloc _errorBloc;
@@ -75,7 +76,7 @@ class AccountBloc {
         _sAccountBlocModel = AccountBlocModel(
             token: token, loginState: LoginState.loggedIn, bloc: this);
     } catch (error) {
-      _errorBloc.setError("$error");
+      _errorBloc.setError("$error", _name);
     } finally {
       _loadingBloc.stopLoading();
     }
@@ -93,7 +94,7 @@ class AccountBloc {
       _sAccountBlocModel = AccountBlocModel(
           token: newToken, loginState: LoginState.loggedIn, bloc: this);
     } catch (e) {
-      _errorBloc.setError("$e");
+      _errorBloc.setError("$e", _name);
     } finally {
       _loadingBloc.stopLoading();
     }
@@ -108,7 +109,7 @@ class AccountBloc {
       _sAccountBlocModel = AccountBlocModel(
           token: newToken, loginState: LoginState.loggedIn, bloc: this);
     } catch (e) {
-      _errorBloc.setError("$e");
+      _errorBloc.setError("$e", _name);
     } finally {
       _loadingBloc.stopLoading();
     }
@@ -121,11 +122,12 @@ class AccountBloc {
           await _loginService.signOutAndDelete(_accountBlocModel.token);
       final clearedPreference = await _preferences.clear();
       if (!(signedOut && clearedPreference))
-        _errorBloc.setError("Could not log out\nRestart app and try again");
+        _errorBloc.setError(
+            "Could not log out\nRestart app and try again", _name);
       _sAccountBlocModel = AccountBlocModel(
           token: null, loginState: LoginState.loggedOut, bloc: this);
     } catch (e) {
-      _errorBloc.setError('$e');
+      _errorBloc.setError('$e', _name);
     } finally {
       _loadingBloc.stopLoading();
     }

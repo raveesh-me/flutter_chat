@@ -16,6 +16,7 @@ class ProfileBlocModel {
 }
 
 class ProfileBloc {
+  final _name = "PROFILE BLOC";
   ProfileBlocModel _profileBlocModel;
   final ProfileService _profileService;
   final AccountBlocModel _accountBlocModel;
@@ -54,7 +55,7 @@ class ProfileBloc {
         throw Exception("Not logged In");
       _sProfile = await _profileService.getProfile(_accountBlocModel.token);
     } catch (e) {
-      _errorBloc.setError("$e");
+      _errorBloc.setError("$e", _name);
     } finally {
       _loadingBloc.stopLoading();
     }
@@ -70,7 +71,7 @@ class ProfileBloc {
           await _profileService.updateProfile(_accountBlocModel.token, profile);
       log("${_profileBlocModel.profile}");
     } catch (e) {
-      _errorBloc.setError("$e");
+      _errorBloc.setError("$e", _name);
     } finally {
       _loadingBloc.stopLoading();
     }

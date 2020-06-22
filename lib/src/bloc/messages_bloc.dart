@@ -17,6 +17,7 @@ class MessagesBlocModel {
 }
 
 class MessagesBloc {
+  final _name = "MESSAGES BLOC";
   final MessagesService _messagesService;
   final AccountBlocModel _accountBlocModel;
   final ErrorBloc _errorBloc;
@@ -61,7 +62,7 @@ class MessagesBloc {
           await _messagesService.getMessages(_accountBlocModel.token, friendId);
       return;
     } catch (e) {
-      _errorBloc.setError("Failed to fetch messages: $e");
+      _errorBloc.setError("Failed to fetch messages: $e", _name);
     } finally {
       _loadingBloc.stopLoading();
       _refreshMessagesTimer = Timer(Duration(seconds: 5), () {
@@ -79,7 +80,7 @@ class MessagesBloc {
       _sMessages = await _messagesService.sendMessage(
           _accountBlocModel.token, friendId, message);
     } catch (e) {
-      _errorBloc.setError("Failed to fetch messages: $e");
+      _errorBloc.setError("Failed to fetch messages: $e", _name);
     } finally {
       _loadingBloc.stopLoading();
     }

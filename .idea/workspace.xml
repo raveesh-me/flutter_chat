@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/get_json_as_map.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/get_json_as_map.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_create_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_create_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_friends_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_friends_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_login_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_login_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_messages_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_messages_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_profile_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_profile_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/bloc/error_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/error_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/bloc/friends_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/friends_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/bloc/messages_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/messages_bloc.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.release">
+  <component name="RunManager" selected="Flutter.debug">
     <list>
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
@@ -74,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00007" summary="doc: updates readme">
-      <created>1592056773803</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1592056773803</updated>
     </task>
     <task id="LOCAL-00008" summary="refactor: refactors [HomeScreenDrawer]">
       <created>1592057589763</created>
@@ -418,11 +409,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592794498603</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="update: adds logging to all the mock services">
+      <created>1592796212800</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1592796212800</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: updates the Json mock service to reflect changes in the API service" />
     <MESSAGE value="refactor: screens -&gt; widgets/screens" />
     <MESSAGE value="update: app state helpers" />
     <MESSAGE value="update: app routing" />
@@ -447,7 +444,8 @@
     <MESSAGE value="test: adds tests for service constructors" />
     <MESSAGE value="adds tests for error_bloc" />
     <MESSAGE value="adds tests for account bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds tests for account bloc" />
+    <MESSAGE value="update: adds logging to all the mock services" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: adds logging to all the mock services" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -479,10 +477,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592794498552">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592796212748">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794498552" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796212748" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" key="DiffContextDialog" timestamp="1592790700841">
@@ -494,34 +492,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592794550676">
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592796229398">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796229398" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592794550676">
+    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592796229398">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
+    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796229398" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592794550676">
+    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592796229398">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
+    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796229398" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592794550676">
+    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592796229398">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
+    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796229398" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592794499698">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592796213996">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794499698" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796213996" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
@@ -533,10 +531,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="751" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592730800604" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1592763402322">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1592796749362">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592763402322" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592796749362" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1592623816220" />
   </component>
 </project>

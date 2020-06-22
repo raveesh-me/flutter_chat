@@ -30,7 +30,7 @@ class _ErrorManagementProviderState extends State<ErrorManagementProvider> {
   @override
   Widget build(BuildContext context) {
     return StreamProvider<ErrorBlocModel>.value(
-      initialData: ErrorBlocModel(false, null, null, null, errorBloc),
+      initialData: ErrorBlocModel(false, null, null, null, null, errorBloc),
       value: errorBloc.stream,
       child: widget.child,
     );

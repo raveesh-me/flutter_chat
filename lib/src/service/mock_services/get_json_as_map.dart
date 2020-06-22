@@ -10,4 +10,5 @@ Future<dynamic> getLocalJsonAsObject(String ref) async {
     message: result.toString(),
     name: 'getLocalJsonAsObject',
   );
+  return result;
 }
