@@ -22,10 +22,10 @@ main() {
         errorBloc.stream,
         emitsInOrder([HasError(false), HasError(true)]),
       );
-      errorBloc.setError("Error, something just happened");
+      errorBloc.setError("Error, something just happened", "ErrorBlocTest");
     });
     test("can take error message", () async {
-      errorBloc.setError("Error, something just happened");
+      errorBloc.setError("Error, something just happened", "ErrorBlocTest");
       ErrorBlocModel errorBlocModel = await errorBloc.stream.first;
       expect(errorBlocModel.errorMessage, "Error, something just happened");
     });
@@ -34,7 +34,7 @@ main() {
         errorBloc.stream,
         emitsInOrder([HasError(false), HasError(true), HasError(false)]),
       );
-      errorBloc.setError("errorMessage");
+      errorBloc.setError("errorMessage", "ErrorBlocTest");
       errorBloc.clear();
     });
   });

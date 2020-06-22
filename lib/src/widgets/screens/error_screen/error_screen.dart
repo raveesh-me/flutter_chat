@@ -24,7 +24,8 @@ class ErrorScreen extends StatelessWidget {
                     errorBlocModel.remedy();
                   },
                   child: Center(
-                    child: Text("${errorBlocModel.remedyLabel}"),
+                    child: Text(
+                        "[${errorBlocModel.originName.toUpperCase()}]${errorBlocModel.remedyLabel}"),
                   ),
                 ),
               )
