@@ -475,10 +475,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592803259578">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592803526420">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803259578" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803526420" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" width="1536" height="864" key="DiffContextDialog" timestamp="1592798181006">
@@ -514,10 +514,10 @@
     <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592803261207">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592803527533">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803261207" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803527533" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592799743726">
