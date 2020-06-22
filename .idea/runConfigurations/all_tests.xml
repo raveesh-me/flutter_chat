@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="tests in test" type="FlutterTestConfigType" factoryName="Flutter Test" singleton="false" nameIsGenerated="true">
+  <configuration default="false" name="all tests" type="FlutterTestConfigType" factoryName="Flutter Test" singleton="false">
     <option name="testDir" value="$PROJECT_DIR$/test" />
     <method v="2" />
   </configuration>
