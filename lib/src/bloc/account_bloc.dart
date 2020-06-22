@@ -20,6 +20,14 @@ class AccountBlocModel {
     @required this.loginState,
     @required this.bloc,
   });
+
+  @override
+  String toString() => '''
+  AccountBlocModel: {
+  loginState: $loginState,
+  token: $token
+  }
+  ''';
 }
 
 class AccountBloc {

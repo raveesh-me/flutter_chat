@@ -4,14 +4,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bloc_tests/error_bloc_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bloc_tests/friends_bloc_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bloc_tests/messages_bloc_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bloc_tests/profile_bloc_test.dart" afterDir="false" />
+    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="adds tests for error_bloc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/service_tests/api_services/profile_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/service_tests/api_services/profile_service_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,51 +53,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter Test.all tests">
-    <configuration name="Can initiate with a false state" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Can initiate with a false state" />
-      <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/loading_bloc_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Loading Bloc..." type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="Loading Bloc..." />
-      <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/loading_bloc_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="emits true when startLoading" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="emits true when startLoading" />
-      <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/loading_bloc_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="initiates with a false" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="initiates with a false" />
-      <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/loading_bloc_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="loading provider..." type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="loading provider..." />
-      <option name="testFile" value="$PROJECT_DIR$/test/widget_tests/app_state_helper_tests/loading_provider_test.dart" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
       <item itemvalue="Flutter.release" />
       <item itemvalue="Flutter Test.all tests" />
-      <item itemvalue="Flutter Test.Can initiate with a false state" />
-      <item itemvalue="Flutter Test.emits true when startLoading" />
-      <item itemvalue="Flutter Test.initiates with a false" />
-      <item itemvalue="Flutter Test.Loading Bloc..." />
-      <item itemvalue="Flutter Test.loading provider..." />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Flutter Test.loading provider..." />
-        <item itemvalue="Flutter Test.Loading Bloc..." />
-        <item itemvalue="Flutter Test.emits true when startLoading" />
-        <item itemvalue="Flutter Test.initiates with a false" />
-        <item itemvalue="Flutter Test.Can initiate with a false state" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -113,13 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update: adds basic plugins">
-      <created>1592053734165</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1592053734165</updated>
     </task>
     <task id="LOCAL-00006" summary="update: dark-light theme toggle working fine">
       <created>1592056592250</created>
@@ -457,11 +407,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592787780893</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="adds tests for error_bloc">
+      <created>1592790566115</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1592790566115</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: account_bloc.dart, error_bloc.dart" />
     <MESSAGE value="update: changes to responsibility of token, authenticated blocs will need AccountBlocModel to be injected and pass tokens to their service calls" />
     <MESSAGE value="update: updates the Json mock service to reflect changes in the API service" />
     <MESSAGE value="refactor: screens -&gt; widgets/screens" />
@@ -486,25 +442,26 @@
     <MESSAGE value="doc: updates to README.md" />
     <MESSAGE value="doc: adds test and release configurations" />
     <MESSAGE value="test: adds tests for service constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: adds tests for service constructors" />
+    <MESSAGE value="adds tests for error_bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds tests for error_bloc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="202" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1592624516005" />
-    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592786893989">
+    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592794105863">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786893989" />
+    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794105863" />
     <state x="710" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592752812632">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="710" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592752812632" />
-    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1592743479733">
+    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1592793567697">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592743479733" />
+    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592793567697" />
     <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1592624874708" />
     <state x="587" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592617486035">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -518,48 +475,49 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592787780835">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592790703917">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787780835" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790703917" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
-    <state x="0" y="93" key="DiffContextDialog" timestamp="1592617245577">
+    <state x="0" y="93" key="DiffContextDialog" timestamp="1592790700841">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="0" y="93" key="DiffContextDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790700841" />
     <state x="0" y="93" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592617245577" />
     <state x="747" y="298" key="FileChooserDialogImpl" timestamp="1592786436912">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592790539739">
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592794462675">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539739" />
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592790539738">
+    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592794462675">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539738" />
+    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592790539738">
+    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592794462675">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539738" />
+    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592790539739">
+    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592794462675">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790539739" />
+    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592787784470">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592790680553">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592787784470" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790680553" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
