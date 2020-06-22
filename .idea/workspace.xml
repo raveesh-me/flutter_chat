@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/bloc/profile_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/profile_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bloc_tests/error_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/bloc_tests/error_bloc_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
@@ -52,7 +54,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.profile">
+  <component name="RunManager" selected="Flutter Test.all tests">
     <list>
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
@@ -490,28 +492,28 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="375" key="GridCell.Tab.0.bottom" timestamp="1592798619280">
+    <state width="1874" height="375" key="GridCell.Tab.0.bottom" timestamp="1592802783625">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592798619280" />
+    <state width="1874" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.center" timestamp="1592798619280">
+    <state width="1874" height="375" key="GridCell.Tab.0.center" timestamp="1592802783625">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592798619280" />
+    <state width="1874" height="375" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.left" timestamp="1592798619280">
+    <state width="1874" height="375" key="GridCell.Tab.0.left" timestamp="1592802783624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592798619280" />
+    <state width="1874" height="375" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783624" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.right" timestamp="1592798619280">
+    <state width="1874" height="375" key="GridCell.Tab.0.right" timestamp="1592802783625">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592798619280" />
+    <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592797971396">
@@ -520,10 +522,10 @@
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592797971396" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
-    <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
+    <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592799743726">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592654286493" />
+    <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592799743726" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592623364892" />
     <state x="751" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592730800604">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -534,5 +536,16 @@
     </state>
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592798548875" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1592623816220" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/test/helpers/widget_test_extensions.dart</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

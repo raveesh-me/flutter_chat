@@ -8,7 +8,7 @@ class ErrorScreen extends StatelessWidget {
     final ErrorBlocModel errorBlocModel = Provider.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("ERROR"),
+        title: Text("[${errorBlocModel.originName.toUpperCase()}]"),
       ),
       body: SafeArea(
         child: Column(
@@ -24,8 +24,7 @@ class ErrorScreen extends StatelessWidget {
                     errorBlocModel.remedy();
                   },
                   child: Center(
-                    child: Text(
-                        "[${errorBlocModel.originName.toUpperCase()}]${errorBlocModel.remedyLabel}"),
+                    child: Text("${errorBlocModel.remedyLabel}"),
                   ),
                 ),
               )
