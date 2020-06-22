@@ -7,6 +7,7 @@
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,11 +455,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592753343814</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="doc: updates to README.md">
+      <created>1592754260565</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1592754260565</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: we need interfaces on api service classes. the methods will not be static anymore" />
     <MESSAGE value="update: implements mock service with json asset parsing" />
     <MESSAGE value="refactor: around token =&gt; _token" />
     <MESSAGE value="update: account_bloc.dart, error_bloc.dart" />
@@ -483,7 +490,8 @@
     <MESSAGE value="update: send images and messages." />
     <MESSAGE value="update: checks all the boxes" />
     <MESSAGE value="update: adds objectives to docs and vcs data to git" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: adds objectives to docs and vcs data to git" />
+    <MESSAGE value="doc: updates to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc: updates to README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -515,10 +523,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592753343776">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592754260514">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592753343776" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592754260514" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" key="DiffContextDialog" timestamp="1592617245577">
@@ -549,10 +557,10 @@
     <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592748676303" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592753344928">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592754261718">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592753344928" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592754261718" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
@@ -564,10 +572,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="751" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592730800604" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1592752543628">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1592763402322">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592752543628" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592763402322" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1592623816220" />
   </component>
 </project>

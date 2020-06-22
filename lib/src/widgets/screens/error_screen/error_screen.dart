@@ -12,8 +12,23 @@ class ErrorScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text(errorBlocModel.errorMessage)],
+          children: [
+            Spacer(),
+            Text(errorBlocModel.errorMessage),
+            Spacer(),
+            if (errorBlocModel.remedy != null)
+              Padding(
+                padding: EdgeInsets.all(18),
+                child: RaisedButton(
+                  onPressed: () {
+                    errorBlocModel.remedy();
+                  },
+                  child: Center(
+                    child: Text("${errorBlocModel.remedyLabel}"),
+                  ),
+                ),
+              )
+          ],
         ),
       ),
     );
