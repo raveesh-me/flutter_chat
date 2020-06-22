@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/create_service_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/friends_service_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/login_service_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/messages_service_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/profile_service_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -51,17 +55,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.debug">
-    <configuration name="profile" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="additionalArgs" value="--profile" />
-      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="release" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="additionalArgs" value="--release" />
-      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Flutter Test.tests in test">
     <configuration name="Can initiate with a false state" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="Can initiate with a false state" />
       <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/loading_bloc_test.dart" />
@@ -91,6 +85,7 @@
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
       <item itemvalue="Flutter.release" />
+      <item itemvalue="Flutter Test.tests in test" />
       <item itemvalue="Flutter Test.Can initiate with a false state" />
       <item itemvalue="Flutter Test.emits true when startLoading" />
       <item itemvalue="Flutter Test.initiates with a false" />
@@ -117,13 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00002" summary="converts bullets to checkboxes in README.md">
-      <created>1592051026089</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1592051026089</updated>
     </task>
     <task id="LOCAL-00003" summary="doc: update process">
       <created>1592051187558</created>
@@ -461,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592785866542</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="doc: updates to README.md">
+      <created>1592786107800</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1592786107800</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -497,10 +492,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="202" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1592624516005" />
-    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592704350445">
+    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592786462776">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592704350445" />
+    <state x="424" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786462776" />
     <state x="710" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592752812632">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -522,44 +517,48 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592785866503">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592786107763">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592785866503" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786107763" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" key="DiffContextDialog" timestamp="1592617245577">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="93" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592617245577" />
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592748676303">
+    <state x="747" y="298" key="FileChooserDialogImpl" timestamp="1592786436912">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592748676303" />
+    <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592786183283">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786183283" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592748676303">
+    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592786183283">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592748676303" />
+    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786183283" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592748676303">
+    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592786183283">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592748676303" />
+    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786183283" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592748676303">
+    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592786183283">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592748676303" />
+    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786183283" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592785867767">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592786109035">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592785867767" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786109035" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
