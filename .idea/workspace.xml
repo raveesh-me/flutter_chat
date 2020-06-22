@@ -4,10 +4,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="adds tests for error_bloc">
+    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/account_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/get_json_as_map.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/get_json_as_map.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_create_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_create_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_friends_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_friends_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_login_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_login_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_messages_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_messages_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/mock_services/json_profile_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/mock_services/json_profile_service.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +56,7 @@
       <recent name="$PROJECT_DIR$/lib/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.all tests">
+  <component name="RunManager" selected="Flutter.release">
     <list>
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
@@ -70,13 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update: dark-light theme toggle working fine">
-      <created>1592056592250</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1592056592250</updated>
     </task>
     <task id="LOCAL-00007" summary="doc: updates readme">
       <created>1592056773803</created>
@@ -414,11 +411,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592790566115</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="adds tests for account bloc">
+      <created>1592794498603</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1592794498603</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: changes to responsibility of token, authenticated blocs will need AccountBlocModel to be injected and pass tokens to their service calls" />
     <MESSAGE value="update: updates the Json mock service to reflect changes in the API service" />
     <MESSAGE value="refactor: screens -&gt; widgets/screens" />
     <MESSAGE value="update: app state helpers" />
@@ -443,7 +446,8 @@
     <MESSAGE value="doc: adds test and release configurations" />
     <MESSAGE value="test: adds tests for service constructors" />
     <MESSAGE value="adds tests for error_bloc" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds tests for error_bloc" />
+    <MESSAGE value="adds tests for account bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds tests for account bloc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -475,10 +479,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592790703917">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592794498552">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790703917" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794498552" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" key="DiffContextDialog" timestamp="1592790700841">
@@ -490,34 +494,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592794462675">
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom" timestamp="1592794550676">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
+    <state width="1874" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592794462675">
+    <state width="1874" height="238" key="GridCell.Tab.0.center" timestamp="1592794550676">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
+    <state width="1874" height="238" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592794462675">
+    <state width="1874" height="238" key="GridCell.Tab.0.left" timestamp="1592794550676">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
+    <state width="1874" height="238" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592794462675">
+    <state width="1874" height="238" key="GridCell.Tab.0.right" timestamp="1592794550676">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794462675" />
+    <state width="1874" height="238" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794550676" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592790680553">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592794499698">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592790680553" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592794499698" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592654286493">
