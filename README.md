@@ -89,7 +89,7 @@ Testability:
 ## Bonus Points:
 - [ ] Mock a Deep link from push-notification delegate/callback feature. (payload: friendId, deep link to chatroom page)
 
-Can be done using something like this: https://morioh.com/p/ce8d84667194 [github](https://github.com/MaikuB/flutter_local_notifications/tree/master/flutter_local_notifications/test) but this uses the local_notification package.
+Can be done using something like this: https://morioh.com/p/ce8d84667194 | [github](https://github.com/MaikuB/flutter_local_notifications/tree/master/flutter_local_notifications/test) but this uses the local_notification package.
 This approach is not supported together FCM / Twilio Pushy, thus real world implementation may differ completely.
 
 - [x] Logging mechanism at development or production level.
