@@ -31,6 +31,9 @@ class _AuthenticatedMultiProviderWrapperState
   ProfileBloc profileBloc;
   ErrorBloc errorBloc;
   LoadingBloc loadingBloc;
+  FriendsService friendsService;
+  MessagesService messagesService;
+  ProfileService profileService;
 
   AccountBlocModel accountBlocModel;
 
@@ -89,26 +92,29 @@ class _AuthenticatedMultiProviderWrapperState
     friendsBloc = FriendsBloc(
       errorBloc: errorBloc,
       accountBlocModel: accountBlocModel,
-      friendsService: getFriendsService(),
+      friendsService: friendsService,
       loadingBloc: loadingBloc,
     );
     messagesBloc = MessagesBloc(
       loadingBloc: loadingBloc,
       accountBlocModel: accountBlocModel,
       errorBloc: errorBloc,
-      messagesService: getMessagesService(),
+      messagesService: messagesService,
     );
     profileBloc = ProfileBloc(
       errorBloc: errorBloc,
       accountBlocModel: accountBlocModel,
       loadingBloc: loadingBloc,
-      profileService: getProfileService(),
+      profileService: profileService,
     );
   }
 
   @override
   void initState() {
     super.initState();
+    friendsService = getFriendsService();
+    messagesService = getMessagesService();
+    profileService = getProfileService();
   }
 
   @override

@@ -37,16 +37,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      builder: (BuildContext context, Widget child) =>
-          Provider<AppBrightnessToggle>.value(
-        value: toggleAppBrightness,
-        child: LoadingProvider(
-          child: LoadingDecider(
-            child: ErrorManagementProvider(
-              child: ErrorManagementDecider(
-                errorScreen: ErrorScreen(),
-                child: AccountManagementProvider(
+    return LoadingProvider(
+      child: ErrorManagementProvider(
+        child: AccountManagementProvider(
+          child: MaterialApp(
+            builder: (BuildContext context, Widget child) =>
+                Provider<AppBrightnessToggle>.value(
+              value: toggleAppBrightness,
+              child: LoadingDecider(
+                child: ErrorManagementDecider(
+                  errorScreen: ErrorScreen(),
                   child: AccountManagementDecider(
                     loggedInScreen:
                         AuthenticatedMultiProviderWraper(child: child),
@@ -55,16 +55,17 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
             ),
+            theme: ThemeData(
+                brightness: appBrightness, primarySwatch: Colors.green),
+            initialRoute: HomeScreen.routeName,
+            routes: {
+              HomeScreen.routeName: (_) => HomeScreen(),
+              ChatroomScreen.routeName: (_) =>
+                  ChatroomScreen(friend: ChatroomScreen.friendFromContext(_)),
+            },
           ),
         ),
       ),
-      theme: ThemeData(brightness: appBrightness, primarySwatch: Colors.green),
-      initialRoute: HomeScreen.routeName,
-      routes: {
-        HomeScreen.routeName: (_) => HomeScreen(),
-        ChatroomScreen.routeName: (_) =>
-            ChatroomScreen(friend: ChatroomScreen.friendFromContext(_)),
-      },
     );
   }
 }
