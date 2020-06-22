@@ -7,8 +7,6 @@
     <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/bloc/profile_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/bloc/profile_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/widgets/screens/error_screen/error_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00010" summary="fix: remove unused variable">
-      <created>1592061167500</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1592061167500</updated>
     </task>
     <task id="LOCAL-00011" summary="update: adds friend and message models&#10;update: adds **/*.g.dart to gitignore">
       <created>1592062858753</created>
@@ -416,11 +407,17 @@
       <option name="project" value="LOCAL" />
       <updated>1592797970309</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="update: readme, profile_bloc.dart, error_screen.dart">
+      <created>1592803259736</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1592803259737</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: app routing" />
     <MESSAGE value="update: adding account screens, a loading screen is needed" />
     <MESSAGE value="update: adds loading bloc" />
     <MESSAGE value="update: safer error_bloc.dart, organised and safer account_bloc.dart" />
@@ -445,7 +442,8 @@
     <MESSAGE value="update: adds logging to all the mock services" />
     <MESSAGE value="update: adds a source name for error handling" />
     <MESSAGE value="sanwiches materialApp builder between loading / error provider and other stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="sanwiches materialApp builder between loading / error provider and other stuff" />
+    <MESSAGE value="update: readme, profile_bloc.dart, error_screen.dart" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: readme, profile_bloc.dart, error_screen.dart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -477,10 +475,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592797970247">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592803259578">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592797970247" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803259578" />
     <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" width="1536" height="864" key="DiffContextDialog" timestamp="1592798181006">
@@ -516,10 +514,10 @@
     <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592797971396">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592803261207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592797971396" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803261207" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592799743726">
