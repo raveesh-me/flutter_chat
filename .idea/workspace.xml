@@ -4,16 +4,20 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="">
+    <list default="true" id="7f5f264b-a0fa-4d3e-9ca0-464c933a3001" name="Default Changelist" comment="update: update README.md">
+      <change afterPath="$PROJECT_DIR$/test/service_tests/api_services/http_error_handler_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/service/api/http_error_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/service/api/http_error_handler.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="58H3Y18831036438" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -53,12 +57,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter Test.all tests">
+    <configuration name="&#10;    CAN initialize&#10;    WHEN the service does not have error&#10;    WHEN shared preferences present&#10;    " type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="&#10;    CAN initialize&#10;    WHEN the service does not have error&#10;    WHEN shared preferences present&#10;    " />
+      <option name="testFile" value="$PROJECT_DIR$/test/bloc_tests/account_bloc_test.dart" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Flutter.debug" />
       <item itemvalue="Flutter.profile" />
       <item itemvalue="Flutter.release" />
       <item itemvalue="Flutter Test.all tests" />
+      <item itemvalue="Flutter Test.&#10;    CAN initialize&#10;    WHEN the service does not have error&#10;    WHEN shared preferences present&#10;    " />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.&#10;    CAN initialize&#10;    WHEN the service does not have error&#10;    WHEN shared preferences present&#10;    " />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,20 +85,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592050390029</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update: adds friend and message models&#10;update: adds **/*.g.dart to gitignore">
-      <created>1592062858753</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1592062858753</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update: implements the pofile page, refresh handle and messafe and profile models">
-      <created>1592111377232</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1592111377232</updated>
     </task>
     <task id="LOCAL-00013" summary="update: start by adding service files">
       <created>1592146948966</created>
@@ -414,12 +415,24 @@
       <option name="project" value="LOCAL" />
       <updated>1592803259737</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="update: youtube video">
+      <created>1592803526492</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1592803526492</updated>
+    </task>
+    <task id="LOCAL-00061" summary="update: update README.md">
+      <created>1592803570796</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1592803570796</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: adding account screens, a loading screen is needed" />
-    <MESSAGE value="update: adds loading bloc" />
     <MESSAGE value="update: safer error_bloc.dart, organised and safer account_bloc.dart" />
     <MESSAGE value="update: better constructor account_bloc.dart, friends_bloc.dart safer, organised" />
     <MESSAGE value="update: organises friends_bloc.dart" />
@@ -443,7 +456,9 @@
     <MESSAGE value="update: adds a source name for error handling" />
     <MESSAGE value="sanwiches materialApp builder between loading / error provider and other stuff" />
     <MESSAGE value="update: readme, profile_bloc.dart, error_screen.dart" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: readme, profile_bloc.dart, error_screen.dart" />
+    <MESSAGE value="update: youtube video" />
+    <MESSAGE value="update: update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: update README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="202" key="#Inspections" timestamp="1592624516005">
@@ -475,11 +490,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="823" y="307" key="AndroidProcessChooserDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592100727361" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592803526420">
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2" timestamp="1592904005951">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803526420" />
-    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645098650" />
+    <state x="334" y="114" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803570725" />
+    <state x="334" y="114" width="782" height="851" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1592904005951" />
     <state x="572" y="114" key="CommitChangelistDialog2/0.0.3286.1080@0.0.3286.1080" timestamp="1592378187095" />
     <state x="0" y="93" width="1536" height="864" key="DiffContextDialog" timestamp="1592798181006">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -490,41 +505,41 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="747" y="298" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592786436912" />
-    <state width="1874" height="375" key="GridCell.Tab.0.bottom" timestamp="1592802783625">
+    <state width="1874" height="361" key="GridCell.Tab.0.bottom" timestamp="1592904201316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
+    <state width="1874" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803845257" />
+    <state width="1874" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1592904201316" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.center" timestamp="1592802783625">
+    <state width="1874" height="361" key="GridCell.Tab.0.center" timestamp="1592904201316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
-    <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
+    <state width="1874" height="375" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803845257" />
+    <state width="1874" height="361" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1592904201316" />
     <state width="1874" height="287" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.left" timestamp="1592802783624">
+    <state width="1874" height="361" key="GridCell.Tab.0.left" timestamp="1592904201315">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783624" />
-    <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095513" />
+    <state width="1874" height="375" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803845257" />
+    <state width="1874" height="361" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1592904201315" />
     <state width="1874" height="287" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state width="1874" height="375" key="GridCell.Tab.0.right" timestamp="1592802783625">
+    <state width="1874" height="361" key="GridCell.Tab.0.right" timestamp="1592904201316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592802783625" />
-    <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592190095514" />
+    <state width="1874" height="375" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803845257" />
+    <state width="1874" height="361" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1592904201316" />
     <state width="1874" height="287" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1592316280107" />
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592803527533">
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2" timestamp="1592803571742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803527533" />
+    <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592803571742" />
     <state x="327" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1592645241583" />
     <state x="560" y="276" key="Vcs.Push.Dialog.v2/0.0.3286.1080@0.0.3286.1080" timestamp="1592653238210" />
-    <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592799743726">
+    <state x="639" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592886569382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592799743726" />
-    <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592623364892" />
+    <state x="639" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1592886569382" />
     <state x="751" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592730800604">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
