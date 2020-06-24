@@ -1,4 +1,5 @@
 import 'package:http/http.dart';
+import 'package:simpleholmuskchat/src/helpers/app_http_exceptions.dart';
 
 class HttpErrorHandler {
   static handleResponseError(Response response) {
@@ -24,29 +25,4 @@ class HttpErrorHandler {
             "There is an error which is not documented in our system");
     }
   }
-}
-
-abstract class AppHttpExcepion implements Exception {
-  String get message;
-  String toString() => 'Exception: $message';
-}
-
-class SessionExpiredException extends AppHttpExcepion {
-  String message;
-  SessionExpiredException(this.message);
-}
-
-class BadParameterException extends AppHttpExcepion {
-  String message;
-  BadParameterException(this.message);
-}
-
-class UnknownEndpointException extends AppHttpExcepion {
-  String message;
-  UnknownEndpointException(this.message);
-}
-
-class InternalServerErrorException extends AppHttpExcepion {
-  String message;
-  InternalServerErrorException(this.message);
 }

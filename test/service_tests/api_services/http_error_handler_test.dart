@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:matcher/matcher.dart';
+import 'package:simpleholmuskchat/src/helpers/app_http_exceptions.dart';
 import 'package:simpleholmuskchat/src/service/api/http_error_handler.dart';
 
 main() {
