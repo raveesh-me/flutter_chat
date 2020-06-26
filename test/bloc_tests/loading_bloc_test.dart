@@ -13,17 +13,17 @@ main() {
       loadingBloc.dispose();
     });
 
-    test("can initiate", () async {
+    test("CAN initiate", () async {
       final LoadingBlocModel loadingBlocModel = await loadingBloc.stream.first;
       expect(loadingBlocModel, isNotNull);
     });
 
-    test("initiates with a false", () async {
+    test("INIT with a false", () async {
       final loadingBlocModel = await loadingBloc.stream.first;
       expect(loadingBlocModel, HasLoadingState(false));
     });
 
-    test("emits true when startLoading", () async {
+    test("EMIT true when startLoading", () async {
       expect(
         loadingBloc.stream,
         emitsInOrder([
@@ -33,7 +33,7 @@ main() {
       );
       loadingBloc.startLoading();
     });
-    test("emits false when stopLoading", () async {
+    test("EMIT false when stopLoading", () async {
       expect(
         loadingBloc.stream,
         emitsInOrder([

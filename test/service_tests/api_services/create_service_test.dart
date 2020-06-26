@@ -3,7 +3,7 @@ import 'package:simpleholmuskchat/src/service/api/create_service.dart';
 
 main() {
   group("Create Service...", () {
-    test("can be initialized", () {
+    test("CAN be initialized", () {
       CreateService createService = CreateService();
       expect(createService, isNotNull);
     });

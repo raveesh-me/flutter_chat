@@ -3,7 +3,7 @@ import 'package:simpleholmuskchat/src/service/api/friends_service.dart';
 
 main() {
   group("Friends Service...", () {
-    test("Can be initialized", () {
+    test("CAN be initialized", () {
       FriendsService friendsService = FriendsService();
       expect(friendsService, isNotNull);
     });

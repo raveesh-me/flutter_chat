@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:simpleholmuskchat/src/bloc/account_bloc.dart';
@@ -29,7 +30,8 @@ class FriendsBloc {
     _subject.add(_friendsBlocModel);
   }
 
-  final _subject = BehaviorSubject<FriendsBlocModel>();
+  final _subject = BehaviorSubject<FriendsBlocModel>.seeded(
+      FriendsBlocModel(friends: [], bloc: null));
   Stream<FriendsBlocModel> get stream => _subject.stream;
 
   FriendsBloc({
@@ -41,7 +43,6 @@ class FriendsBloc {
         this._accountBlocModel = accountBlocModel,
         this._friendsService = friendsService,
         this._loadingBloc = loadingBloc {
-    _sFriends = [];
     init();
   }
 

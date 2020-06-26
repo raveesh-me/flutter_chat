@@ -10,26 +10,26 @@ main() {
     tearDown(() {
       errorBloc.dispose();
     });
-    test("can intialize", () {
+    test("CAN initialize", () {
       expect(errorBloc, isNotNull);
     });
-    test("initial data does not have error", () async {
+    test("INIT not have error", () async {
       ErrorBlocModel errorBlocModel = await errorBloc.stream.first;
       expect(errorBlocModel.hasError, false);
     });
-    test("can set error", () async {
+    test("CAN set error", () async {
       expect(
         errorBloc.stream,
         emitsInOrder([HasError(false), HasError(true)]),
       );
       errorBloc.setError("Error, something just happened", "ErrorBlocTest");
     });
-    test("can take error message", () async {
+    test("CAN take error message", () async {
       errorBloc.setError("Error, something just happened", "ErrorBlocTest");
       ErrorBlocModel errorBlocModel = await errorBloc.stream.first;
       expect(errorBlocModel.errorMessage, "Error, something just happened");
     });
-    test("can set and clear error", () async {
+    test("CAN set and clear error", () async {
       expect(
         errorBloc.stream,
         emitsInOrder([HasError(false), HasError(true), HasError(false)]),

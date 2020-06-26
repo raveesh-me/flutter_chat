@@ -3,7 +3,7 @@ import 'package:simpleholmuskchat/src/service/api/login_service.dart';
 
 main() {
   group("Login Service...", () {
-    test("Can be initialized", () {
+    test("CAN be initialized", () {
       LoginService loginService = LoginService();
       expect(loginService, isNotNull);
     });

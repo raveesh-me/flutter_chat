@@ -3,7 +3,7 @@ import 'package:simpleholmuskchat/src/service/api/profile_service.dart';
 
 main() {
   group("Profile Service ...", () {
-    test("Can be intialized", () {
+    test("CAN be intialized", () {
       ProfileService profileService = ProfileService();
       expect(profileService, isNotNull);
     });
